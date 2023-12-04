@@ -1,0 +1,42 @@
+/*Welcome Section */
+
+#welcome-section {
+    background-color: #3fc66e1a;
+}
+
+.welcome-section__container {
+    padding-top: 80px;
+    padding-right: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-section__left {
+    width: 55%;
+}
+.welcome-section__left img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-section__right {
+    width: 45%;
+}
+
+/* .welcome-section__right h2 {
+    font-size: 60px;
+    line-height: 70px;
+    color: var(--dark-brown);
+    margin-bottom: 50px;
+} */
+
+.welcome-section__right h2 span {
+    color: var(--orange);
+}
+
+/* .welcome-section__right p{
+    color: var(--light-brown);
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 40px;
+} */
