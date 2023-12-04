@@ -4,6 +4,7 @@ import { Welcome } from "./sections/welcome/Welcome";
 import { Menu } from "./sections/menu/Menu";
 import { Reservation } from "./sections/reservation/Reservation";
 import { Chefs } from "./sections/chefs/Chefs";
+import { Testimonials } from "./sections/testimonials/Testimonials";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Menu />
             <Reservation/>
             <Chefs/>
+            <Testimonials/>
         </>
     );
 };
