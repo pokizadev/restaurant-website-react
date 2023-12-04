@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 70px;
+  color: var(--dark-brown);
+  margin-bottom: 50px;
+}
+
+.welcome-section__right p,
+.reservation-section__right p {
+  color: var(--light-brown);
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-section__container,
+.menu-section__container,
+.chefs-section__container,
+.testimonials-section__container,
+.hours-section__container,
+.footer__container {
+  padding: 80px;
+}
+
+
 * {
   padding: 0;
   margin: 0;
