@@ -1,6 +1,7 @@
 import { TopNavigation } from "./sections/top-navigation/TopNavigation";
 import { Hero } from "./sections/hero/Hero";
 import { Welcome } from "./sections/welcome/Welcome";
+import { Menu } from "./sections/menu/Menu";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <TopNavigation />
             <Hero />
             <Welcome />
+            <Menu />
         </>
     );
 };

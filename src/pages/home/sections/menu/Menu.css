@@ -1,0 +1,71 @@
+/* Menu Section */
+
+.menu-section__container h2 {
+    text-align: center;
+    /* font-size: 60px;
+    line-height: 70px;
+    color: var(--dark-brown);
+    margin-bottom: 50px; */
+}
+
+.menu-section__filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.menu-section__meals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.menu-section__stars {
+    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: max-content;
+}
+
+.menu-section__price {
+    font-size: 25px;
+    line-height: 38px;
+    color: var(--dark-brown);
+    font-weight: 600;
+}
+
+.card {
+    width: calc((100% - 80px) / 3);
+
+    padding: 35px 37px;
+    background-color: #d0ccc733;
+    border-radius: 70px;
+}
+
+.card__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.card__title {
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.card__text {
+    font-size: 14px;
+    line-height: 28px;
+    color: #59442b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
