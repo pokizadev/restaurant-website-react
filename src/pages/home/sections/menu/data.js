@@ -11,43 +11,43 @@ export const meals = [
     {
         name: "Spaghetti",
         img: spaghetti,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 0, 0],
-        price: "6.99"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$12.99"
     },
     {
         name: "Gnocchi",
         img: gnocchi,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 0],
-        price: "11.49"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 0, 0],
+        price: "$7.49"
     },
     {
         name: "Rovioli",
         img: rovioli,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1.1],
-        price: "14.99"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 0],
+        price: "$10.99"
     },
     {
-        name: "penna Alla Vodal",
+        name: "Penna Alla Vodak",
         img: penneAllaVodak,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "7.99"
+        price: "$8.99"
     },
     {
         name: "Risoto",
         img: risoto,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 0],
-        price: "17.49"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 0, 0],
+        price: "$5.99"
     },
     {
         name: "Splitza",
         img: splitza,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 0, 0],
-        price: "4.99"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$12.99"
     }
 ];
