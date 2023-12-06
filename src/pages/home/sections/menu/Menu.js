@@ -4,19 +4,27 @@ import { meals } from "./data";
 import starFilled from "../../../../assets/star-filled.svg";
 import starEmpty from "../../../../assets/star-empty.svg";
 
+const Star = (props) => {
+    return (
+        <img
+        src={props.number ? starFilled : starEmpty}
+        alt={props.nimber ? "Star Filled" : "Star Empty"}
+        />
+    )
+}
+
 const Meal = (props) => {
     return (
-        <div className="card" key={props.idx}>
+        <div className="card">
             <img src={props.img} alt={props.name} className="card__img" />
             <h3 className="card__title">{props.name}</h3>
             <div className="menu-section__stars">
                 {props.rating.map((number, idx) => {
                     return (
-                        <img
-                            key={idx}
-                            src={number ? starFilled : starEmpty}
-                            alt={number ? "Filled Star" : "Empty Star"}
-                        />
+                       <Star
+                       key={idx} 
+                       number={number}
+                       />
                     );
                 })}
             </div>
