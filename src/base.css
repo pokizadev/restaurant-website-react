@@ -61,61 +61,6 @@ a {
   text-decoration: none;
 }
 
-/* Buttons */
-.btn {
-  cursor: pointer;
-  border: none;
-}
-
-.btn-sm {
-  height: 50px;
-  border-radius: 133px;
-  padding-left: 36px;
-  padding-right: 36px;
-}
-
-.btn-md {
-  height: 55px;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 162px;
-  padding-right: 36px;
-  padding-left: 36px;
-}
-
-.btn-lg {
-  height: 74px;
-  font-size: 20px;
-  font-weight: 600;
-  border-radius: 162px;
-  padding-right: 55px;
-  padding-left: 55px;
-}
-
-.btn-green {
-  background-color: #3fa72f;
-  color: #ffffff;
-}
-
-.btn-orange {
-  background-color: #ff8a00;
-  color: #ffffff;
-}
-
-.btn-black {
-  background-color: #311f09;
-  color: #ffffff;
-}
-
-.btn-gray {
-  background-color: #ecf0f1;
-  color: #311f09;
-}
-
-.btn-white {
-  background-color: #ffffff;
-  color: #311f09;
-}
 
 /*Container */
 
