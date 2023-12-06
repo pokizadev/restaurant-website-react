@@ -3,7 +3,27 @@ import "./Footer.css";
 import twitter from "../../../../assets/twitter.svg";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
-import logoDark from "../../../../assets/logo-dark.svg"
+import logoDark from "../../../../assets/logo-dark.svg";
+
+const pageLinks = [
+    { text: "Home", link: "abc.com" },
+    { text: "Menu", link: "abc.com" },
+    { text: "Order Online", link: "abc.com" },
+    { text: "Catering", link: "abc.com" },
+    { text: "Reservation", link: "abc.com" }
+];
+
+const informationLinks = [
+    { text: "About Us", link: "abc.com" },
+    { text: "Testimonials", link: "abc.com" },
+    { text: "Events", link: "abc.com" }
+];
+
+const contactLinks = [
+    { text: "3247 Johnson Ave, Bronx, NY 10463", link: "abc.com" },
+    { text: "delizioso@gmail.com", link: "mailto: delizioso@gmail.com" },
+    { text: "+123 4567 8901", link: "tel:+123 4567 8901" }
+]
 
 const Footer = () => {
     return (
@@ -21,56 +41,41 @@ const Footer = () => {
                             non duis tempor.
                         </p>
                         <div className="footer__social-icons">
-                            <img src={twitter} alt="" />
-                            <img src={instagram} alt="" />
-                            <img src={facebook} alt="" />
+                            <img src={twitter} alt="Twitter" />
+                            <img src={instagram} alt="Instagram" />
+                            <img src={facebook} alt="Facebook" />
                         </div>
                     </div>
+
                     <div className="footer__pages">
                         <h4 className="footer__heading">Page</h4>
-                        <a href="" className="footer__text">
-                            Home
-                        </a>
-                        <a href="" className="footer__text">
-                            Menu
-                        </a>
-                        <a href="" className="footer__text">
-                            Order online
-                        </a>
-                        <a href="" className="footer__text">
-                            Catering
-                        </a>
-                        <a href="" className="footer__text">
-                            Reservation
-                        </a>
+                        {pageLinks.map((link, idx) => {
+                            return (
+                                <a
+                                    key={idx}
+                                    href={link.link}
+                                    className="footer__text"
+                                >
+                                    {link.text}
+                                </a>
+                            );
+                        })}
                     </div>
                     <div className="footer__about">
                         <h4 className="footer__heading">Information</h4>
-                        <a href="" className="footer__text">
-                            About us
+                        {informationLinks.map((link, idx) => {
+                            return <a key={idx} href={link.link} className="footer__text">
+                            {link.text}
                         </a>
-                        <a href="" className="footer__text">
-                            Testimonial
-                        </a>
-                        <a href="" className="footer__text">
-                            Events
-                        </a>
+                        })}
                     </div>
                     <div className="footer__contact">
                         <h4 className="footer__heading">Get in touch</h4>
-                        <p className="footer__text">
-                            3247 Johnson Ave, <br />
-                            Bronx, NY 10463
-                        </p>
-                        <a
-                            href="mailto: delizioso@gmail.com<"
-                            className="footer__text"
-                        >
-                            delizioso@gmail.com
+                        {contactLinks.map((link, idx) => {
+                            return <a key={idx} href={link.link} className="footer__text">
+                                {link.text}
                         </a>
-                        <a href="tel:+123 4567 8901" className="footer__text">
-                            +123 4567 8901
-                        </a>
+                        })}
                     </div>
                 </div>
                 <p className="footer__text text-center">
@@ -81,5 +86,4 @@ const Footer = () => {
     );
 };
 
-
-export {Footer}
+export { Footer };
