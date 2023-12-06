@@ -4,14 +4,16 @@ import { meals } from "./data";
 import starFilled from "../../../../assets/star-filled.svg";
 import starEmpty from "../../../../assets/star-empty.svg";
 
+import { Button } from "../../../../design-system/button/Button";
+
 const Star = (props) => {
     return (
         <img
-        src={props.number ? starFilled : starEmpty}
-        alt={props.nimber ? "Star Filled" : "Star Empty"}
+            src={props.number ? starFilled : starEmpty}
+            alt={props.nimber ? "Star Filled" : "Star Empty"}
         />
-    )
-}
+    );
+};
 
 const Meal = (props) => {
     return (
@@ -20,18 +22,15 @@ const Meal = (props) => {
             <h3 className="card__title">{props.name}</h3>
             <div className="menu-section__stars">
                 {props.rating.map((number, idx) => {
-                    return (
-                       <Star
-                       key={idx} 
-                       number={number}
-                       />
-                    );
+                    return <Star key={idx} number={number} />;
                 })}
             </div>
             <p className="card__text">{props.description}</p>
             <div className="card__footer">
                 <span className="menu-section__price">{props.price}</span>
-                <button className="btn btn-md btn-orange">Order Now</button>
+                <Button size="md" color="orange">
+                    Order Now
+                </Button>
             </div>
         </div>
     );
@@ -43,13 +42,21 @@ const Menu = () => {
             <div className="sections-container menu-section__container">
                 <h2>Our Popular Menu</h2>
                 <div className="menu-section__filters">
-                    <button className="btn btn-lg btn-black">
+                    <Button size="lg" color="black">
                         All Catagories
-                    </button>
-                    <button className="btn btn-lg btn-gray">Dinner</button>
-                    <button className="btn btn-lg btn-gray">Lunch</button>
-                    <button className="btn btn-lg btn-gray">Dessert</button>
-                    <button className="btn btn-lg btn-gray">Drink</button>
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Dinner
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Lunch
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Dessert
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Drink
+                    </Button>
                 </div>
                 <div className="menu-section__meals">
                     {meals.map((meal, idx) => {

@@ -1,6 +1,6 @@
 import "./Hero.css";
 import hero from "../../../../assets/hero.png";
-
+import { Button } from "../../../../design-system/button/Button";
 
 const Hero = () => {
     return (
@@ -14,15 +14,21 @@ const Hero = () => {
                         Sodales senectus dictum arcu sit tristique donec eget.
                     </p>
                     <div className="hero-section__cta">
-                        <button className="btn btn-lg btn-orange">Order Now</button>
-                        <button className="btn btn-lg btn-green">
+                        <Button size="lg" color="orange">
+                            Order Now
+                        </Button>
+                        <Button size="lg" color="green">
                             Reservation
-                        </button>
+                        </Button>
                     </div>
                 </div>
 
                 <div className="hero-section__right">
-                    <img src={hero} alt="Spaghetti" className="hero-section__img" />
+                    <img
+                        src={hero}
+                        alt="Spaghetti"
+                        className="hero-section__img"
+                    />
                 </div>
             </div>
         </section>
@@ -30,4 +36,3 @@ const Hero = () => {
 };
 
 export { Hero };
-
