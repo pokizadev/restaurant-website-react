@@ -9,7 +9,7 @@ const Testimonials = () => {
                 <div className="testimonials-section__testimonials">
                     {customers.map((customer, idx) => {
                         return (
-                            <div className="testimonials-section__testimonial">
+                            <div className="testimonials-section__testimonial" key={idx}>
                                 <img src={customer.img} alt={customer.name} />
                                 <h4>{customer.name}</h4>
                                 <h5>{customer.position}</h5>
