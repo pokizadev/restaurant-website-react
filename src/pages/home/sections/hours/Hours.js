@@ -1,4 +1,5 @@
 import "./Hours.css";
+import {Button} from "../../../../design-system/button/Button"
 
 const Hours = () => {
     return (
@@ -13,10 +14,10 @@ const Hours = () => {
                             <p>Dinner : Sunday : 04:00pm-08:00pm</p>
                             <p>04:00pm-09:00pm</p>
                         </div>
-                        <button className="btn btn-lg btn-orange">Order Now</button>
-                        <button className="btn btn-lg btn-white">
+                        <Button size="lg" color="orange" >Order Now</Button>
+                        <Button size="lg" color="white">
                             Reservation
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>

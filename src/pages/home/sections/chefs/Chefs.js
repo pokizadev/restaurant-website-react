@@ -1,5 +1,6 @@
 import "./Chefs.css";
 import { chefs } from "./data";
+import {Button} from "../../../../design-system/button/Button"
 
 const Chefs = () => {
     return (
@@ -19,7 +20,7 @@ const Chefs = () => {
                         );
                     })}
                 </div>
-                <button className="btn btn-lg btn-orange">View All</button>
+                <Button size="lg" color="orange">View All</Button>
             </div>
         </section>
     );

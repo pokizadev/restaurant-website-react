@@ -1,5 +1,5 @@
 import "./Reservation.css";
-
+import {Button} from "../../../../design-system/button/Button"
 import reservation from "../../../../assets/reservation.png"
 
 const Reservation = () => {
@@ -21,9 +21,9 @@ const Reservation = () => {
                         Facilisis ultricies at eleifend proin. Congue nibh nulla
                         malesuada ultricies nec quam
                     </p>
-                    <button className="btn btn-lg btn-orange">
+                    <Button size="lg" color="orange">
                         Reservation
-                    </button>
+                    </Button>
                 </div>
             </div>
         </section>
