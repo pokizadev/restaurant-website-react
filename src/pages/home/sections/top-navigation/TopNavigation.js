@@ -1,6 +1,7 @@
+import "./TopNavigation.css";
+
 import logoWhite from "../../../../assets/logo-white.svg";
 import cart from "../../../../assets/cart.svg";
-import "./TopNavigation.css";
 import { Button } from "../../../../design-system/button/Button";
 
 const links = [
