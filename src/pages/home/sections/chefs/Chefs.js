@@ -2,6 +2,17 @@ import "./Chefs.css";
 import { chefs } from "./data";
 import {Button} from "../../../../design-system/button/Button"
 
+const Chef = (props) => {
+    return (
+        <div className="chefs-section__chef" key={idx}>
+        <img src={props.img} 
+        alt={props.name} />
+        <h4>{props.name}</h4>
+        <p>{props.position}</p>
+    </div>
+    )
+}
+
 const Chefs = () => {
     return (
         <section id="chefs-section">
@@ -12,11 +23,12 @@ const Chefs = () => {
                 <div className="chefs-section__chefs">
                     {chefs.map((chef, idx) => {
                         return (
-                            <div className="chefs-section__chef" key={idx}>
-                                <img src={chef.img} alt={chef.name} />
-                                <h4>{chef.name}</h4>
-                                <p>{chef.position}</p>
-                            </div>
+                           <Chef
+                            key={idx}
+                            name={chef.name}
+                            img={chef.img}
+                            position={chef.position}
+                           />
                         );
                     })}
                 </div>
