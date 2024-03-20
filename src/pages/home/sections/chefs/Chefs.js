@@ -4,7 +4,7 @@ import {Button} from "../../../../design-system/button/Button"
 
 const Chef = (props) => {
     return (
-        <div className="chefs-section__chef" key={idx}>
+        <div className="chefs-section__chef">
         <img src={props.img} 
         alt={props.name} />
         <h4>{props.name}</h4>

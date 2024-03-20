@@ -3,7 +3,7 @@ import { customers } from "./data";
 
 const Testimonial = (props) => {
     return (
-        <div className="testimonials-section__testimonial" key={idx}>
+        <div className="testimonials-section__testimonial">
         <img src={props.img} alt={props.name} />
         <h4>{props.name}</h4>
         <h5>{props.position}</h5>
