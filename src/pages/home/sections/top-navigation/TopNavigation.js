@@ -2,9 +2,12 @@ import "./TopNavigation.css";
 
 import logoWhite from "../../../../assets/logo-white.svg";
 import cart from "../../../../assets/cart.svg";
+import mobileNavIcon from "../../../../assets/Home.png";
 import { Button } from "../../../../design-system/button/Button";
+import { useState } from "react";
+import { MobileNavigation } from "./MobileNavigation";
 
-const links = [
+export const links = [
     { text: "Home", link: "https://google.com" },
     { text: "Menu", link: "https://facebook.com" },
     { text: "About Us", link: "" },
@@ -14,6 +17,12 @@ const links = [
 ];
 
 const TopNavigation = () => {
+    const [showMobileNav, setShowMobileNav] = useState(false);
+
+    const handleMobileNavToggle = () => {
+        setShowMobileNav(prevState => !prevState);
+    };
+
     return (
         <header className="header">
             <nav className="navigation">
@@ -28,10 +37,20 @@ const TopNavigation = () => {
                     })}
                 </ul>
                 <div className="navigation__actions">
-                    <figure>
+                    <figure className="cart">
                         <img src={cart} alt="Shopping Cart" />
                     </figure>
-                    <Button size="sm" color="green">Sign In</Button>
+                    <Button size="sm" color="green">
+                        Sign In
+                    </Button>
+                    <figure className="mobile-nav__icon" onClick={handleMobileNavToggle}>
+                        <img
+                            src={mobileNavIcon}
+                            alt="mobile navigation"
+                        />
+
+                        {showMobileNav && <MobileNavigation /> }
+                    </figure>
                 </div>
             </nav>
         </header>

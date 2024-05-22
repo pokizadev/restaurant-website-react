@@ -24,6 +24,10 @@
     display: flex;
     gap: 45px;
     align-items: center;
+
+    @media (max-width: 75em) {
+        display: none;
+    }
 }
 
 .navigation__links li a {
@@ -45,12 +49,12 @@
     /* gap: 25px; */
 }
 
-.navigation__actions img {
+/* .navigation__actions img {
     height: 24px;
     width: 24px;
-}
+} */
 
-.navigation__actions figure {
+.cart {
     height: 50px;
     width: 50px;
     background-color: rgb(236, 240, 241);
@@ -59,4 +63,23 @@
     align-items: center;
     justify-content: center;
     margin-right: 25px;
+}
+
+.navigation__actions button {
+    @media (max-width: 75em) {
+        display: none;
+    }
+}
+
+.mobile-nav__icon {
+    display: none;
+
+    @media (max-width: 75em) {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 }
