@@ -10,8 +10,7 @@ const Hero = () => {
                     <span>Restaurant</span>
                     <h1 className="hero-section__heading">Italian Cuisine</h1>
                     <p className="hero-section__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sodales senectus dictum arcu sit tristique donec eget.
+                    Eleganzo is a modern Italian restaurant that seamlessly blends tradition with contemporary flair.
                     </p>
                     <div className="hero-section__cta">
                         <Button size="lg" color="orange">

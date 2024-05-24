@@ -20,7 +20,12 @@
 .chefs-section__chefs {
     display: flex;
     gap: 40px;
-    margin: 80px;
+    margin-bottom: 50px;
+
+    @media (max-width: 900px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .chefs-section__container .btn-orange {
@@ -30,6 +35,10 @@
 
 .chefs-section__chef {
     width: calc((100% - 80px) / 3);
+
+    @media (max-width: 900px) {
+        width: 350px;
+    }
 }
 
 .chefs-section__chef img {
@@ -45,6 +54,17 @@
 
 .chefs-section__chef:nth-child(2) img {
     background-color: #ff8a0033;
+}
+
+.chefs-section__chef:nth-child(3) {
+    display: none;
+
+    @media (max-width: 900px) {
+        display: list-item;
+        img {
+            background-color: #ff8a0033;
+        }
+    }
 }
 
 .chefs-section__chef:last-child img {

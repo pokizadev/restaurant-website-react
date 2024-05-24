@@ -58,9 +58,9 @@
 .hero-section__description {
     margin-bottom: 50px;
     color: rgb(92, 69, 41);
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 2px;
+    font-size: 22px;
+    line-height: 44px;
+    letter-spacing: 1px;
 }
 
 .hero-section__cta button:first-child {
