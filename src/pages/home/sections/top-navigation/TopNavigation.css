@@ -2,10 +2,30 @@
 
 .header {
     height: 80px;
+    padding-top: 20px;
 }
 
-.logo-white {
-    height: 51px;
+.logo-wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: 55px;
+    margin-right: 6px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 21px;
+  
+}
+
+span {
+    color: var(--orange);
 }
 
 .navigation {

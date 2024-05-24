@@ -30,7 +30,8 @@
     color: var(--orange);
     font-size: 30px;
     line-height: 32px;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
+    font-weight: 600;
 }
 
 .mobile-nav__links {
