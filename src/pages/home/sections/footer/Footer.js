@@ -3,7 +3,7 @@ import "./Footer.css";
 import twitter from "../../../../assets/twitter.svg";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
-import logoDark from "../../../../assets/logo-dark.svg";
+import logo from "../../../../assets/logoe.svg";
 
 const pageLinks = [
     { text: "Home", link: "abc.com" },
@@ -21,9 +21,9 @@ const informationLinks = [
 
 const contactLinks = [
     { text: "3247 Johnson Ave, Bronx, NY 10463", link: "abc.com" },
-    { text: "delizioso@gmail.com", link: "mailto: delizioso@gmail.com" },
+    { text: "eleganzo@gmail.com", link: "mailto: delizioso@gmail.com" },
     { text: "+123 4567 8901", link: "tel:+123 4567 8901" }
-]
+];
 
 const Footer = () => {
     return (
@@ -31,19 +31,38 @@ const Footer = () => {
             <div className="sections-container footer__container">
                 <div className="footer__content">
                     <div className="footer__brand">
-                        <img
-                            src={logoDark}
-                            alt="Logo"
-                            className="footer__logo"
-                        />
-                        <p className="footer__text">
-                            Viverra gravida morbi egestas facilisis tortor netus
-                            non duis tempor.
+                        <div className="footer__logo-wrapper">
+                            <img
+                                src={logo}
+                                alt="Logo"
+                                className="footer__logo"
+                            />
+                            <p className="footer__logo-text">
+                                Ele<span>Ganzo</span>
+                            </p>
+                        </div>
+
+                        <p className="footer__description">
+                            Taste the Difference, Explore Our Menu and Stay
+                            Connected. Follow Us on Social Media for Updates,
+                            Specials, and More!
                         </p>
                         <div className="footer__social-icons">
-                            <img src={twitter} alt="Twitter" />
-                            <img src={instagram} alt="Instagram" />
-                            <img src={facebook} alt="Facebook" />
+                            <img
+                                className="footer__social-icon"
+                                src={twitter}
+                                alt="Twitter"
+                            />
+                            <img
+                                className="footer__social-icon"
+                                src={instagram}
+                                alt="Instagram"
+                            />
+                            <img
+                                className="footer__social-icon"
+                                src={facebook}
+                                alt="Facebook"
+                            />
                         </div>
                     </div>
 
@@ -61,25 +80,39 @@ const Footer = () => {
                             );
                         })}
                     </div>
+
                     <div className="footer__about">
                         <h4 className="footer__heading">Information</h4>
                         {informationLinks.map((link, idx) => {
-                            return <a key={idx} href={link.link} className="footer__text">
-                            {link.text}
-                        </a>
+                            return (
+                                <a
+                                    key={idx}
+                                    href={link.link}
+                                    className="footer__text"
+                                >
+                                    {link.text}
+                                </a>
+                            );
                         })}
                     </div>
+
                     <div className="footer__contact">
                         <h4 className="footer__heading">Get in touch</h4>
                         {contactLinks.map((link, idx) => {
-                            return <a key={idx} href={link.link} className="footer__text">
-                                {link.text}
-                        </a>
+                            return (
+                                <a
+                                    key={idx}
+                                    href={link.link}
+                                    className="footer__text"
+                                >
+                                    {link.text}
+                                </a>
+                            );
                         })}
                     </div>
                 </div>
-                <p className="footer__text text-center">
-                    Copyright &COPY; 2023 Delizioso
+                <p className="footer__text text-end">
+                    Copyright ©COPY <br/> 2023 EleGanzo
                 </p>
             </div>
         </footer>

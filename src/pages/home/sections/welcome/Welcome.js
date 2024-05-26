@@ -10,11 +10,9 @@ const Welcome = () => {
                 <img src={salad} alt="Salad" />
             </figure>
             <div className="welcome-section__right">
-                <h2>Welcome to <span>DeliziOso</span></h2>
+                <h2>Welcome to <span>EleGanzo</span></h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Facilisis ultricies at eleifend proin. Congue nibh nulla
-                    malesuada ultricies nec quam
+                Eleganzo offers an exquisite dining experience with its innovative menu, featuring fresh, locally sourced ingredients and authentic Italian flavors. 
                 </p>
                 <Button size="lg" color="orange">See Our Menu</Button>
             </div>

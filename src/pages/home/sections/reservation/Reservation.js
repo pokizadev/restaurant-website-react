@@ -17,9 +17,7 @@ const Reservation = () => {
                         Let's reserve <span>a table</span>
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Facilisis ultricies at eleifend proin. Congue nibh nulla
-                        malesuada ultricies nec quam
+                    Located in the heart of the city, So guests can enjoy a stylish, inviting ambiance perfect for both casual meals and special occasions.
                     </p>
                     <Button size="lg" color="orange">
                         Reservation

@@ -19,7 +19,7 @@ export const meals = [
         name: "Gnocchi",
         img: gnocchi,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 0, 0],
+        rating: [1, 1, 1, 1, 0],
         price: "$7.49"
     },
     {

@@ -16,6 +16,11 @@ export const chefs = [
         position: "Chef"
     },
     {
+        img: chef2,
+        name: "Ferry Sauwi",
+        position: "Chef"
+    },
+    {
         img: chef3,
         name: "Iswan Dracho",
         position: "Chef"

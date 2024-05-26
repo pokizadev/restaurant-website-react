@@ -4,57 +4,108 @@
     background-color: var(--dark-brown);
 }
 
-/* .footer__container {
-    padding: 80px;
-} */
+.footer__content {
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: space-between;
 
-.footer__text {
-    color: #e3e2e0;
-    font-size: 16px;
-    line-height: 50px;
-    display: block;
+    @media (max-width: 900px) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .footer__brand {
     width: 30%;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
-.text-center {
+.footer__logo-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.footer__logo-text {
+    color: var(--white);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.footer__description {
+    color: #e3e2e0;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1.1px;
+    display: block;
+}
+
+.footer__text {
+    color: #e3e2e0;
+    font-size: 16px;
+    line-height: 28px;
+    display: block;
+    margin-bottom: 20px;
+
+    @media (max-width: 700px) {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+}
+
+.text-end {
     text-align: center;
+
+    @media (max-width: 700px) {
+        text-align: start;
+    }
 }
 
 .footer__social-icons {
     margin-top: 40px;
 }
 
-.footer__social-icons img:first-child {
-    padding-right: 20px;
-}
-
+.footer__social-icons img:first-child,
 .footer__social-icons img:nth-child(2) {
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
-.footer__logo {
-    margin-bottom: 25px;
-}
+.footer__social-icon {
+    @media (max-width: 1000px) {
+        height: 30px;
+        width: 30px;
+    }
 
-.footer__content {
-    display: flex;
-    margin-bottom: 80px;
-    justify-content: space-between;
+    @media (max-width: 700px) {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .footer__heading {
     color: var(--orange);
-    font-size: 25px;
-    line-height: 50px;
-    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
 }
 
 .footer__contact {
     width: 30%;
+
+    @media (max-width: 700px) {
+        width: 100%;
+    }
+
 }
-
-
-
