@@ -32,6 +32,10 @@ h2 {
 .hours-section__container,
 .footer__container {
   padding: 80px;
+
+  @media(max-width: 800px) {
+    padding: 40px;
+  }
 }
 
 

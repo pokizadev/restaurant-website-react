@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="sections-container footer__container">
                 <div className="footer__content">
                     <div className="footer__brand">
-                        <div className="logo-wrapper">
+                        <div className="footer__logo-wrapper">
                             <img
                                 src={logo}
                                 alt="Logo"
@@ -42,23 +42,24 @@ const Footer = () => {
                             </p>
                         </div>
 
-                        <p className="footer__text">
-                            Viverra gravida morbi egestas facilisis tortor netus
-                            non duis tempor.
+                        <p className="footer__description">
+                            Taste the Difference, Explore Our Menu and Stay
+                            Connected. Follow Us on Social Media for Updates,
+                            Specials, and More!
                         </p>
                         <div className="footer__social-icons">
                             <img
-                                className="footer-icon"
+                                className="footer__social-icon"
                                 src={twitter}
                                 alt="Twitter"
                             />
                             <img
-                                className="footer-icon"
+                                className="footer__social-icon"
                                 src={instagram}
                                 alt="Instagram"
                             />
                             <img
-                                className="footer-icon"
+                                className="footer__social-icon"
                                 src={facebook}
                                 alt="Facebook"
                             />
@@ -79,6 +80,7 @@ const Footer = () => {
                             );
                         })}
                     </div>
+
                     <div className="footer__about">
                         <h4 className="footer__heading">Information</h4>
                         {informationLinks.map((link, idx) => {
@@ -93,6 +95,7 @@ const Footer = () => {
                             );
                         })}
                     </div>
+
                     <div className="footer__contact">
                         <h4 className="footer__heading">Get in touch</h4>
                         {contactLinks.map((link, idx) => {
@@ -108,8 +111,8 @@ const Footer = () => {
                         })}
                     </div>
                 </div>
-                <p className="footer__text text-center">
-                    Copyright &COPY; 2023 Delizioso
+                <p className="footer__text text-end">
+                    Copyright ©COPY <br/> 2023 EleGanzo
                 </p>
             </div>
         </footer>

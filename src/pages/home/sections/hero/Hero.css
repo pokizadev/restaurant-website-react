@@ -1,14 +1,13 @@
 /* Hero Section */
 
 .hero-section__container {
-    padding: 80px;
     display: flex;
     align-items: center;
     gap: 40px;
 
     @media (max-width: 1100px) {
-       flex-direction: column;
-       gap: 100px;
+        flex-direction: column;
+        gap: 100px;
     }
 }
 
@@ -68,5 +67,22 @@
 
     @media (max-width: 1100px) {
         margin-right: 120px;
+    }
+
+    @media (max-width: 700px) {
+        margin-right: 30px;
+    }
+}
+
+.hero-section__cta {
+    @media (max-width: 600px) {
+        .btn {
+            height: 55px;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 162px;
+            padding-right: 36px;
+            padding-left: 36px;
+        }
     }
 }

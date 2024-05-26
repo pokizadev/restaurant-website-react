@@ -10,7 +10,7 @@ const Star = (props) => {
     return (
         <img
             src={props.number ? starFilled : starEmpty}
-            alt={props.nimber ? "Star Filled" : "Star Empty"}
+            alt={props.number ? "Star Filled" : "Star Empty"}
         />
     );
 };
@@ -31,6 +31,10 @@ const Meal = (props) => {
                 <Button size="md" color="orange">
                     Order Now
                 </Button>
+
+                <Button className="plus" size="sm" color="orange">
+                    +
+                </Button>
             </div>
         </div>
     );
@@ -42,8 +46,8 @@ const Menu = () => {
             <div className="sections-container menu-section__container">
                 <h2>Our Popular Menu</h2>
                 <div className="menu-section__filters">
-                    <Button size="lg" color="black">
-                        All Catagories
+                    <Button size="lg" color="gray">
+                        Popular
                     </Button>
                     <Button size="lg" color="gray">
                         Dinner

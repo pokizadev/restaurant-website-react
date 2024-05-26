@@ -2,7 +2,7 @@ import "./TopNavigation.css";
 
 import logo from "../../../../assets/logoe.svg"
 import cart from "../../../../assets/cart.svg";
-import mobileNavIcon from "../../../../assets/Home.png";
+import mobileNavIcon from "../../../../assets/Home.svg";
 import { Button } from "../../../../design-system/button/Button";
 import { useState } from "react";
 import { MobileNavigation } from "./MobileNavigation";

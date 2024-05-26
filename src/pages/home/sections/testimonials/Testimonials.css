@@ -9,7 +9,6 @@
 
 .testimonials-section__container {
     position: relative;
-
 }
 
 .testimonials-section__container h2 {
@@ -18,7 +17,6 @@
     color: var(--dark-brown); */
     margin-bottom: 100px;
     text-align: center;
-
 }
 
 .testimonials-section__testimonials {
@@ -48,7 +46,12 @@
 
     @media (max-width: 1000px) {
         height: 300px;
-        width: 300px;   
+        width: 300px;
+    }
+
+    @media (max-width: 500px) {
+        height: 150px;
+        width: 150px;
     }
 }
 
@@ -92,11 +95,19 @@
 }
 
 .left {
-    top: 60%;
+    top: 70%;
     left: 15%;
+
+    @media (max-width: 700px) {
+        left: 10%;
+    }
 }
 
 .right {
-    top: 60%;
+    top: 70%;
     right: 15%;
+
+    @media (max-width: 700px) {
+        right: 10%;
+    }
 }
