@@ -1,18 +1,18 @@
 @font-face {
     font-family: "Poppins", sans-serif;
-    src: url(./assets/fonts/Poppins-Bold.ttf) format("truetype");
+    src: url(../../assets/fonts/Poppins-Bold.ttf) format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Poppins", sans-serif;
-    src: url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype");
+    src: url(../../assets/fonts/Poppins-SemiBold.ttf) format("truetype");
     font-weight: 600;
 }
 
 @font-face {
     font-family: "Poppins", sans-serif;
-    src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+    src: url(../../assets/fonts/Poppins-Regular.ttf) format("truetype");
     font-weight: 400;
 }
 
@@ -25,6 +25,11 @@
 html {
     font-family: "Poppins", sans-serif;
     font-size: 62.5%; /* it sets base font size to 10px */
+}
+
+
+span {
+    color: var(--orange);
 }
 
 ul {

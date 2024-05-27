@@ -112,7 +112,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <p className="footer__text text-end">
-                    Copyright ©COPY <br/> 2023 EleGanzo
+                    Copyright © 2023 EleGanzo
                 </p>
             </div>
         </footer>

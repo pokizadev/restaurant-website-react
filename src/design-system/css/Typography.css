@@ -12,6 +12,7 @@
     --font-size-18: 1.8rem;
     --font-size-20: 2rem;
     --font-size-24: 2.4rem;
+    --font-size-30: 3rem;
     --font-size-32: 3.2rem;
     --font-size-40: 4rem;
     --font-size-48: 4.8rem;
@@ -71,7 +72,7 @@
 }
 
 .subtitle-lg {
-    font-size: var(--font-size-25);
+    font-size: var(--font-size-24);
     line-height: var(--line-height-50);
 }
 
@@ -85,10 +86,16 @@
     line-height: var(--line-height-32);
 }
 
+.paragraph-xl,
 .paragraph-lg,
 .paragraph-md,
 .paragraph-sm {
     font-weight: var(--font-weight-400);
+}
+
+.paragraph-xl {
+    font-size: var(--font-size-24);
+    line-height: var(--line-height-32);
 }
 
 .paragraph-lg {
