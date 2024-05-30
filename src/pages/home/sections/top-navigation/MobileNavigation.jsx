@@ -1,40 +1,37 @@
 import styled from "styled-components";
 import { links } from "./TopNavigation";
-import "./MobileNavigation.css";
 import closeIcon from "../../../../assets/close (2).png";
 
 const MobileNavContent = styled.div`
-    width: 50vh;
+    width: 60vh;
     height: 100vh;
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    display: block;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-1);
 
-    @media (max-width: 1100px) {
-        width: 40vh;
-    }
 
-    @media (max-width: 700px) {
-        width: 30vh;
+    @media (max-width: 50em) {
+        width: 50vh;
     }
-    @media (max-width: 500px) {
-        width: 25vh;
+    @media (max-width: 32em) {
+        width: 100%;
     }
 `;
 
 const MobileNavTop = styled.div`
-    height: 80px;
-    border-bottom: 1px solid gray;
-    padding: 30px 80px 20px 80px;
+    height: var(--space-80);
+    border-bottom: 0.1rem solid gray;
     display: flex;
     justify-content: space-between;
+    padding: var(--space-30) var(--space-80) var(--space-20) var(--space-80);
+    
 
-    @media (max-width: 800px) {
-        padding-left: 40px;
-        padding-right: 40px;
+    @media (max-width: 50em) {
+        padding-left: var(--space-40);
+        padding-right: var(--space-40);
     }
 `;
 
@@ -44,27 +41,32 @@ const Title = styled.p`
 `;
 
 const CloseIcon = styled.img`
-    height: 28px;
-    width: 28px;
-    margin-top: 4px;
+    height: 2.8rem;
+    width: 2.8rem;
+    margin-top: var(--space-4);
 `;
 const MobileNavBottom = styled.div`
-    padding: 50px 80px 0 80px;
+    padding: var(--space-50) var(--space-80) 0 var(--space-80);
 
-    @media (max-width: 800px) {
-        padding-left: 40px;
+    @media (max-width: 50em) {
+        padding-left: var(--space-40);
     }
 `;
 const MobileNavLinks = styled.ul`
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--space-30);
 `;
 
 const Link = styled.li`
     color: var(--light-brown);
     letter-spacing: 0.11rem;
-`
+
+    &:hover,
+    &:focus {
+        color: var(--orange);
+    }
+`;
 const MobileNavigation = () => {
     return (
         <MobileNavContent>
@@ -77,7 +79,9 @@ const MobileNavigation = () => {
                     {links.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <Link className="paragraph-xl" href={link.link}>{link.text}</Link>
+                                <Link className="paragraph-xl" href={link.link}>
+                                    {link.text}
+                                </Link>
                             </li>
                         );
                     })}

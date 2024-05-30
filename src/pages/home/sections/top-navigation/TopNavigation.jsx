@@ -4,9 +4,9 @@ import { useState } from "react";
 import logo from "../../../../assets/logoe.svg";
 import cart from "../../../../assets/cart.svg";
 import mobileNavIcon from "../../../../assets/Home.svg";
-import { Button } from "../../../../design-system/button/Button";
-import { MobileNavigation } from "./MobileNavigation";
-import { Container } from "../../../components/Container.tsx";
+import { Button } from "../../../../design-system/button/Button.js";
+import { MobileNavigation } from "./MobileNavigation.jsx";
+import { Container } from "../../../components";
 
 export const links = [
     { text: "Home", link: "https://google.com" },
@@ -32,7 +32,7 @@ const LogoWrapper = styled.div`
 
 const NavigationLinks = styled.ul`
     display: flex;
-    gap: 45px;
+    gap: var(--space-44);
     align-items: center;
 
     @media (max-width: 75em) {
@@ -61,8 +61,8 @@ const Actions = styled.div`
 `;
 
 const Cart = styled.figure`
-    height: 50px;
-    width: 50px;
+    height: var(--space-50);
+    width: var(--space-50);
     background-color: rgb(236, 240, 241);
     border-radius: 50%;
     display: flex;

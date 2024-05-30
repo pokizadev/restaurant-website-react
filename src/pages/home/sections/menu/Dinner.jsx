@@ -1,53 +1,51 @@
-import "./Menu.css";
+import cacio from "../../../../assets/dinner/cacio-e-pepe.png"
+import chickenpiccata from "../../../../assets/dinner/chicken-piccata.png"
+import eggplantdish from "../../../../assets/dinner/eggplant.png"
+import lasagna from "../../../../assets/dinner/lasagna.png"
+import minestrone from "../../../../assets/dinner/minestrone.png"
+import chili from "../../../../assets/dinner/turkey-chili.png"
 
-import spaghetti from "../../../../assets/menu-spaghetti.png";
-import gnocchi from "../../../../assets/menu-gnocchi.png";
-import rovioli from "../../../../assets/menu-rovioli.png";
-import penneAllaVodak from "../../../../assets/menu-penne-alla-vodak.png";
-import risoto from "../../../../assets/menu-risoto.png";
-import splitza from "../../../../assets/menu-splitza.png";
-
-export const meals = [
+export const dinner = [
     {
-        name: "Spaghetti",
-        img: spaghetti,
+        name: "Cacio e pepe",
+        img: cacio,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 1],
+        rating: [1, 1, 1, 1, 0],
         price: "$12.99"
     },
     {
-        name: "Gnocchi",
-        img: gnocchi,
+        name: "Chicken Piccata",
+        img: chickenpiccata,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 0],
-        price: "$7.49"
+        rating: [1, 1, 1, 1, 1],
+        price: "$15.49"
     },
     {
-        name: "Rovioli",
-        img: rovioli,
+        name: "Eggplant Parm",
+        img: eggplantdish,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$10.99"
+        price: "$6.99"
     },
     {
-        name: "Penna Alla Vodak",
-        img: penneAllaVodak,
+        name: "Lasagna",
+        img: lasagna,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 0],
-        price: "$8.99"
+        rating: [1, 1, 1, 1, 1],
+        price: "$19.99"
     },
     {
-        name: "Risoto",
-        img: risoto,
+        name: "Minestrone Soup",
+        img: minestrone,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 0, 0],
         price: "$5.99"
     },
     {
-        name: "Splitza",
-        img: splitza,
+        name: "Turkey Chili",
+        img: chili,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$12.99"
+        price: "$9.99"
     }
 ];
