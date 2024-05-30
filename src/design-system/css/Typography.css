@@ -69,6 +69,11 @@
 .subtitle-xl {
     font-size: var(--font-size-30);
     line-height: var(--line-height-60);
+
+    @media (max-width: 31.25em) {
+        font-size: var(--font-size-20);
+        line-height: var(--line-height-23)
+    }
 }
 
 .subtitle-lg {
@@ -111,6 +116,11 @@
 .paragraph-sm {
     font-size: var(--font-size-14);
     line-height: var(--line-height-23);
+
+    @media (max-width: 31.25em) {
+        font-size: var(--font-size-12);
+        line-height: var(--line-height-16);
+    }
 }
 
 
