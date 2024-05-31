@@ -5,8 +5,8 @@ import logo from "../../../../assets/logoe.svg";
 import cart from "../../../../assets/cart.svg";
 import mobileNavIcon from "../../../../assets/Home.svg";
 import { Button } from "../../../../design-system/button/Button.js";
-import { MobileNavigation } from "./MobileNavigation.jsx";
-import { Container } from "../../../components";
+import { MobileNavigation } from "./MobileNavigation.js";
+import { Container } from "../../../components/index.js";
 
 export const links = [
     { text: "Home", link: "https://google.com" },

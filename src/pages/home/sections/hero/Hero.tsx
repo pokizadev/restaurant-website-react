@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import hero from "../../../../assets/hero.png";
+import hero from "../../../../assets/hero.png"
 import { Button } from "../../../../design-system/button/Button";
 import { Container } from "../../../components";
 

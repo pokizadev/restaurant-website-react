@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Meal } from "./Meal.jsx";
-import { meals } from "./Popular.jsx";
-import { Button } from "../../../../design-system/button/Button";
+import { Meal } from "./Meal";
+import { popular } from "./Popular.jsx";
+import { Button } from "../../../../design-system/button/Button.js";
 import { Container } from "../../../components";
 
 const MenuSectionContent = styled.div`
@@ -22,9 +22,10 @@ const MenuFilters = styled.div`
     margin-bottom: 60px;
     overflow-x: auto;
     scrollbar-width: none;
-`
-const CurrentMenu = styled.div`
-     display: grid;
+`;
+
+const CurrentMenu = styled.div<{ $active: boolean}>`
+    display: ${(props) => (props.$active ? "grid" : "none")};
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     gap: var(--space-30);
@@ -32,10 +33,10 @@ const CurrentMenu = styled.div`
     @media (max-width: 68.75em) {
         grid-template-columns: repeat(2, 1fr);
     }
-`
+`;
 
 const Menu = () => {
-    const [currentMenu, setCurrentMenu] = useState(0)
+    const [currentMenu, setCurrentMenu] = useState(0);
     return (
         <Container id="menu-section">
             <MenuSectionContent>
@@ -58,7 +59,7 @@ const Menu = () => {
                     </Button>
                 </MenuFilters>
                 <CurrentMenu>
-                    {meals.map((meal, idx) => {
+                    {popular.map((meal, idx) => {
                         return (
                             <Meal
                                 key={idx}
