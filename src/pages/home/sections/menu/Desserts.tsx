@@ -1,3 +1,4 @@
+import { Meal } from "./Meal";
 import dessert1 from "../../../../assets/desserts/tiramisu.png";
 import dessert2 from "../../../../assets/desserts/pistachio-Stracciatella-Gelato.png";
 import dessert3 from "../../../../assets/desserts/zabaglione.png";
@@ -5,7 +6,7 @@ import dessert4 from "../../../../assets/desserts/Affogato.png";
 import dessert5 from "../../../../assets/desserts/cheese-cake.png";
 import dessert6 from "../../../../assets/desserts/assorti.png";
 
-export const dinner = [
+export const desserts = [
     {
         name: "Tiramisu",
         img: dessert1,
@@ -55,3 +56,24 @@ export const dinner = [
         price: "$8.75"
     }
 ];
+
+const Desserts = () => {
+    return (
+        <div>
+            {desserts.map((dessert, idx) => {
+                return (
+                    <Meal
+                        key={idx}
+                        name={dessert.name}
+                        img={dessert.img}
+                        description={dessert.description}
+                        rating={dessert.rating}
+                        price={dessert.price}
+                    />
+                );
+            })}
+        </div>
+    );
+};
+
+export { Desserts };

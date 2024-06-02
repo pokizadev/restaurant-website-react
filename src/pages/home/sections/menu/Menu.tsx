@@ -1,9 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Meal } from "./Meal";
-import { popular } from "./Popular.jsx";
 import { Button } from "../../../../design-system/button/Button.js";
 import { Container } from "../../../components";
+import { PopularMenu } from "./Popular";
+import { LunchMenu } from "./Lunch";
+import { DinnerMenu } from "./Dinner";
+import { Desserts } from "./Desserts";
+import { Drinks } from "./Drinks";
 
 const MenuSectionContent = styled.div`
     padding-top: var(--space-120);
@@ -24,7 +28,7 @@ const MenuFilters = styled.div`
     scrollbar-width: none;
 `;
 
-const CurrentMenu = styled.div<{ $active: boolean}>`
+const CurrentMenu = styled.div<{ $active: boolean }>`
     display: ${(props) => (props.$active ? "grid" : "none")};
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
@@ -35,6 +39,14 @@ const CurrentMenu = styled.div<{ $active: boolean}>`
     }
 `;
 
+const menuTypes = [
+    { linkText: "Popular", component: "PopularMenu" },
+    { linkText: "Dinner", component: "DinnerMenu" },
+    { linkText: "Lunch", component: "LunchMenu" },
+    { linkText: "Desserts", component: "Desserts" },
+    { linkText: "Drinks", component: "Drinks" }
+];
+
 const Menu = () => {
     const [currentMenu, setCurrentMenu] = useState(0);
     return (
@@ -42,36 +54,24 @@ const Menu = () => {
             <MenuSectionContent>
                 <MenuTitle className="heading-2">Our Popular Menu</MenuTitle>
                 <MenuFilters>
-                    <Button size="lg" color="gray">
-                        Popular
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Dinner
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Lunch
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Dessert
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Drink
-                    </Button>
-                </MenuFilters>
-                <CurrentMenu>
-                    {popular.map((meal, idx) => {
+                    {menuTypes.map((menu, idx) => {
                         return (
-                            <Meal
+                            <Button
                                 key={idx}
-                                name={meal.name}
-                                img={meal.img}
-                                description={meal.description}
-                                rating={meal.rating}
-                                price={meal.price}
-                            />
+                                size="lg"
+                                color={currentMenu ? "black" : "gray"}
+                                onClick={() => setCurrentMenu(idx)}
+                            >
+                                {menu.linkText}
+                            </Button>
                         );
                     })}
-                </CurrentMenu>
+                </MenuFilters>
+                {menuTypes.map((menu, idx) => (
+                    <CurrentMenu key={idx} $active={currentMenu === idx}>
+                        {menu.component}
+                    </CurrentMenu>
+                ))}
             </MenuSectionContent>
         </Container>
     );

@@ -58,7 +58,7 @@ const MobileNavLinks = styled.ul`
     gap: var(--space-30);
 `;
 
-const Link = styled.li`
+const NavLink = styled.a`
     color: var(--light-brown);
     letter-spacing: 0.11rem;
 
@@ -79,9 +79,9 @@ const MobileNavigation = () => {
                     {links.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <Link className="paragraph-xl" href={link.link}>
+                                <NavLink className="paragraph-xl" href={link.link}>
                                     {link.text}
-                                </Link>
+                                </NavLink>
                             </li>
                         );
                     })}

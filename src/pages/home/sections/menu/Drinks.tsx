@@ -1,3 +1,4 @@
+import { Meal } from "./Meal"
 import drink1 from "../../../../assets/drinks/negroni.png"
 import drink2 from "../../../../assets/drinks/bellini.png"
 import drink3 from "../../../../assets/drinks/campari.png"
@@ -5,7 +6,7 @@ import drink4 from "../../../../assets/drinks/coke.png"
 import drink5 from "../../../../assets/drinks/margarita.png"
 import drink6 from "../../../../assets/drinks/sangria.png"
 
-export const dinner = [
+export const drinks = [
     {
         name: "Negroni",
         img: drink1,
@@ -49,3 +50,24 @@ export const dinner = [
         price: "$5.75"
     }
 ];
+
+const Drinks = () => {
+    return (
+        <div>
+            {drinks.map((drink, idx) => {
+                return (
+                    <Meal
+                        key={idx}
+                        name={drink.name}
+                        img={drink.img}
+                        description={drink.description}
+                        rating={drink.rating}
+                        price={drink.price}
+                    />
+                );
+            })}
+        </div>
+    );
+};
+
+export { Drinks };

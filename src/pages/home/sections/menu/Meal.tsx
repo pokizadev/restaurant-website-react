@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { Button } from "../../../../design-system/button/Button";
 import starFilled from "../../../../assets/star-filled.svg";
 import starEmpty from "../../../../assets/star-empty.svg";
+import React from "react";
 
-const Star = (props) => {
+export type StarProps = {
+    number: number
+}
+const Star: React.FC<StarProps> = (props) => {
     return (
         <img
             src={props.number ? starFilled : starEmpty}
@@ -91,7 +95,15 @@ const MealPrice = styled.span`
     }
 `;
 
-const Meal = (props) => {
+export type MealProps = {
+    img: string,
+    name: string,
+    rating: number[],
+    description: string,
+    price: string,
+}
+
+const Meal: React.FC<MealProps> = (props) => {
     return (
         <Card>
             <MealImg src={props.img} alt={props.name} />
