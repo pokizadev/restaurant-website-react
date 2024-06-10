@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 import { Meal } from "./Meal";
 import spaghetti from "../../../../assets/popular/menu-spaghetti.png";
 import gnocchi from "../../../../assets/popular/menu-gnocchi.png";
@@ -57,9 +59,20 @@ export const popular = [
     }
 ];
 
+const CurrentMenu = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: var(--space-30);
+
+    @media (max-width: 68.75em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+`;
+
 const PopularMenu = () => {
     return (
-        <div>
+        <CurrentMenu>
             {popular.map((meal, idx) => {
                 return (
                     <Meal
@@ -72,7 +85,7 @@ const PopularMenu = () => {
                     />
                 );
             })}
-        </div>
+        </CurrentMenu>
     );
 };
 

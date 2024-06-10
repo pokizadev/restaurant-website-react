@@ -1,3 +1,4 @@
+import styled from "styled-components"
 import { Meal } from "./Meal"
 import drink1 from "../../../../assets/drinks/negroni.png"
 import drink2 from "../../../../assets/drinks/bellini.png"
@@ -51,9 +52,20 @@ export const drinks = [
     }
 ];
 
+const CurrentMenu = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: var(--space-30);
+
+    @media (max-width: 68.75em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+`;
+
 const Drinks = () => {
     return (
-        <div>
+        <CurrentMenu>
             {drinks.map((drink, idx) => {
                 return (
                     <Meal
@@ -66,7 +78,7 @@ const Drinks = () => {
                     />
                 );
             })}
-        </div>
+        </CurrentMenu>
     );
 };
 

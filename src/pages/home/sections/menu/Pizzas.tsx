@@ -5,6 +5,7 @@ import pizza3 from "../../../../assets/pizzas/veggie.png";
 import pizza4 from "../../../../assets/pizzas/mushroom.png";
 import pizza5 from "../../../../assets/pizzas/chicken-pizza.png";
 import pizza6 from "../../../../assets/pizzas/fish-pizza.png";
+import styled from "styled-components";
 
 export const pizzas = [
     {
@@ -57,9 +58,20 @@ export const pizzas = [
     }
 ];
 
+const CurrentMenu = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: var(--space-30);
+
+    @media (max-width: 68.75em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+`;
+
 const Pizzas = () => {
     return (
-        <div>
+        <CurrentMenu>
             {pizzas.map((pizza, idx) => {
                 return (
                     <Meal
@@ -72,7 +84,7 @@ const Pizzas = () => {
                     />
                 );
             })}
-        </div>
+        </CurrentMenu>
     );
 };
 

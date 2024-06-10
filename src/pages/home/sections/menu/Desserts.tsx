@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { Meal } from "./Meal";
 import dessert1 from "../../../../assets/desserts/tiramisu.png";
 import dessert2 from "../../../../assets/desserts/pistachio-Stracciatella-Gelato.png";
@@ -57,9 +58,20 @@ export const desserts = [
     }
 ];
 
+const CurrentMenu = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: var(--space-30);
+
+    @media (max-width: 68.75em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+`;
+
 const Desserts = () => {
     return (
-        <div>
+        <CurrentMenu>
             {desserts.map((dessert, idx) => {
                 return (
                     <Meal
@@ -72,7 +84,7 @@ const Desserts = () => {
                     />
                 );
             })}
-        </div>
+        </CurrentMenu>
     );
 };
 

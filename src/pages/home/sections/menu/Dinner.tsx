@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { Meal } from "./Meal";
 import cacio from "../../../../assets/dinner/cacio-e-pepe.png";
 import chickenpiccata from "../../../../assets/dinner/chicken-piccata.png";
@@ -57,9 +58,20 @@ export const dinnerMeals = [
     }
 ];
 
+const CurrentMenu = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: var(--space-30);
+
+    @media (max-width: 68.75em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+`;
+
 const DinnerMenu = () => {
     return (
-        <div>
+        <CurrentMenu>
             {dinnerMeals.map((dinnerMeal, idx) => {
                 return (
                     <Meal
@@ -72,7 +84,7 @@ const DinnerMenu = () => {
                     />
                 );
             })}
-        </div>
+        </CurrentMenu>
     );
 };
 

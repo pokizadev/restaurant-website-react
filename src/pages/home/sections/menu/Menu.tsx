@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Meal } from "./Meal";
 import { Button } from "../../../../design-system/button/Button.js";
 import { Container } from "../../../components";
 import { PopularMenu } from "./Popular";
 import { LunchMenu } from "./Lunch";
 import { DinnerMenu } from "./Dinner";
+import { Pizzas } from "./Pizzas";
 import { Desserts } from "./Desserts";
 import { Drinks } from "./Drinks";
 
@@ -28,27 +28,20 @@ const MenuFilters = styled.div`
     scrollbar-width: none;
 `;
 
-const CurrentMenu = styled.div<{ $active: boolean }>`
-    display: ${(props) => (props.$active ? "grid" : "none")};
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: var(--space-30);
-
-    @media (max-width: 68.75em) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-`;
-
 const menuTypes = [
-    { linkText: "Popular", component: "PopularMenu" },
-    { linkText: "Dinner", component: "DinnerMenu" },
-    { linkText: "Lunch", component: "LunchMenu" },
-    { linkText: "Desserts", component: "Desserts" },
-    { linkText: "Drinks", component: "Drinks" }
+    { name: "Popular", component: PopularMenu },
+    { name: "Dinner", component: DinnerMenu },
+    { name: "Lunch", component: LunchMenu },
+    { name: "Pizza", component: Pizzas },
+    { name: "Desserts", component: Desserts },
+    { name: "Drinks", component: Drinks }
 ];
 
 const Menu = () => {
     const [currentMenu, setCurrentMenu] = useState(0);
+
+    const CurrentComponent = menuTypes[currentMenu].component;
+
     return (
         <Container id="menu-section">
             <MenuSectionContent>
@@ -59,19 +52,16 @@ const Menu = () => {
                             <Button
                                 key={idx}
                                 size="lg"
-                                color={currentMenu ? "black" : "gray"}
+                                color={idx === currentMenu ? "black" : "gray"}
                                 onClick={() => setCurrentMenu(idx)}
                             >
-                                {menu.linkText}
+                                {menu.name}
                             </Button>
                         );
                     })}
                 </MenuFilters>
-                {menuTypes.map((menu, idx) => (
-                    <CurrentMenu key={idx} $active={currentMenu === idx}>
-                        {menu.component}
-                    </CurrentMenu>
-                ))}
+
+                <CurrentComponent />
             </MenuSectionContent>
         </Container>
     );

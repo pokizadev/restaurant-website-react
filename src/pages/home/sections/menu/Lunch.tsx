@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 import { Meal } from "./Meal";
 import lunch1 from "../../../../assets/lunch/Eleganzo-special.png";
 import lunch2 from "../../../../assets/lunch/gricia.png";
@@ -57,9 +59,20 @@ export const lunches = [
     }
 ];
 
+const CurrentMenu = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: var(--space-30);
+
+    @media (max-width: 68.75em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+`;
+
 const LunchMenu = () => {
     return (
-        <div>
+        <CurrentMenu>
             {lunches.map((lunch, idx) => {
                 return (
                     <Meal
@@ -72,7 +85,7 @@ const LunchMenu = () => {
                     />
                 );
             })}
-        </div>
+        </CurrentMenu>
     );
 };
 
