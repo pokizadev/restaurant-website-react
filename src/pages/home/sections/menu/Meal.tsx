@@ -5,8 +5,8 @@ import starEmpty from "../../../../assets/star-empty.svg";
 import React from "react";
 
 export type StarProps = {
-    number: number
-}
+    number: number;
+};
 const Star: React.FC<StarProps> = (props) => {
     return (
         <img
@@ -17,6 +17,9 @@ const Star: React.FC<StarProps> = (props) => {
 };
 
 const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
     width: auto;
     padding: var(--space-36);
     background-color: #d0ccc733;
@@ -31,7 +34,7 @@ const Card = styled.div`
 const MealImg = styled.img`
     width: 100%;
     height: auto;
-    margin-bottom: 24px;
+    margin-bottom: var(--space-20);
 `;
 
 const MealTitle = styled.h3`
@@ -48,13 +51,15 @@ const StarsWrapper = styled.div`
 const MealDescription = styled.p`
     color: #59442b;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: var(--space-30);
+    line-height: var(--space-28);
 `;
 
 const MealFooter = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto;
 
     .btn {
         @media (max-width: 56.25em) {
@@ -91,17 +96,17 @@ const MealPrice = styled.span`
 
     @media (max-width: 31.25em) {
         font-size: var(--font-size-16);
-        line-height: var(--line-height-24)
+        line-height: var(--line-height-24);
     }
 `;
 
 export type MealProps = {
-    img: string,
-    name: string,
-    rating: number[],
-    description: string,
-    price: string,
-}
+    img: string;
+    name: string;
+    rating: number[];
+    description: string;
+    price: string;
+};
 
 const Meal: React.FC<MealProps> = (props) => {
     return (

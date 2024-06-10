@@ -1,60 +1,60 @@
+import { Meal } from "../Meal";
+import pizza1 from "../../../../../assets/pizzas/regular.png";
+import pizza2 from "../../../../../assets/pizzas/pepperoni.png";
+import pizza3 from "../../../../../assets/pizzas/veggie.png";
+import pizza4 from "../../../../../assets/pizzas/mushroom.png";
+import pizza5 from "../../../../../assets/pizzas/chicken-pizza.png";
+import pizza6 from "../../../../../assets/pizzas/fish-pizza.png";
 import styled from "styled-components";
-import { Meal } from "./Meal";
-import dessert1 from "../../../../assets/desserts/tiramisu.png";
-import dessert2 from "../../../../assets/desserts/pistachio-Stracciatella-Gelato.png";
-import dessert3 from "../../../../assets/desserts/zabaglione.png";
-import dessert4 from "../../../../assets/desserts/Affogato.png";
-import dessert5 from "../../../../assets/desserts/cheese-cake.png";
-import dessert6 from "../../../../assets/desserts/assorti.png";
 
-export const desserts = [
+export const pizzas = [
     {
-        name: "Tiramisu",
-        img: dessert1,
+        name: "Regular Pizza",
+        img: pizza1,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$9.99"
+        price: "$14.99"
     },
     {
-        name: "Pistachio Stracciatella Gelato",
-        img: dessert2,
+        name: "Pepperoni Pizza",
+        img: pizza2,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$13.49"
+        price: "$16.49"
     },
     {
-        name: "Zabaglione Raspberry",
-        img: dessert3,
+        name: "Veggie Pizza",
+        img: pizza3,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$9.99"
+        price: "$15.99"
     },
     {
-        name: "Affogato",
-        img: dessert4,
+        name: "Mushroom Pizza",
+        img: pizza4,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$8.99"
+        price: "$15.99"
     },
     {
-        name: "Cheese Cake",
-        img: dessert5,
+        name: "Chicken Pizza",
+        img: pizza5,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$6.75"
+        price: "$18.75"
     },
     {
-        name: "Assorti",
-        img: dessert6,
+        name: "Fish Pizza",
+        img: pizza6,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$8.75"
+        price: "$19.99"
     }
 ];
 
@@ -69,18 +69,18 @@ const CurrentMenu = styled.div`
     }
 `;
 
-const Desserts = () => {
+const Pizzas = () => {
     return (
         <CurrentMenu>
-            {desserts.map((dessert, idx) => {
+            {pizzas.map((pizza, idx) => {
                 return (
                     <Meal
                         key={idx}
-                        name={dessert.name}
-                        img={dessert.img}
-                        description={dessert.description}
-                        rating={dessert.rating}
-                        price={dessert.price}
+                        name={pizza.name}
+                        img={pizza.img}
+                        description={pizza.description}
+                        rating={pizza.rating}
+                        price={pizza.price}
                     />
                 );
             })}
@@ -88,4 +88,4 @@ const Desserts = () => {
     );
 };
 
-export { Desserts };
+export { Pizzas };

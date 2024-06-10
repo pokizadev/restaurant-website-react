@@ -1,61 +1,60 @@
 import styled from "styled-components";
+import { Meal } from "../Meal";
+import drink1 from "../../../../../assets/drinks/negroni.png";
+import drink2 from "../../../../../assets/drinks/bellini.png";
+import drink3 from "../../../../../assets/drinks/campari.png";
+import drink4 from "../../../../../assets/drinks/coke.png";
+import drink5 from "../../../../../assets/drinks/margarita.png";
+import drink6 from "../../../../../assets/drinks/sangria.png";
 
-import { Meal } from "./Meal";
-import spaghetti from "../../../../assets/popular/menu-spaghetti.png";
-import gnocchi from "../../../../assets/popular/menu-gnocchi.png";
-import rovioli from "../../../../assets/popular/menu-rovioli.png";
-import penneAllaVodak from "../../../../assets/popular/menu-penne-alla-vodak.png";
-import risoto from "../../../../assets/popular/menu-risoto.png";
-import splitza from "../../../../assets/popular/menu-splitza.png";
-
-export const popular = [
+export const drinks = [
     {
-        name: "Spaghetti",
-        img: spaghetti,
+        name: "Negroni",
+        img: drink1,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$12.99"
+        price: "$6.99"
     },
     {
-        name: "Gnocchi",
-        img: gnocchi,
+        name: "Bellini",
+        img: drink2,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$7.49"
+        price: "$3.89"
     },
     {
-        name: "Rovioli",
-        img: rovioli,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 0],
-        price: "$10.99"
-    },
-    {
-        name: "Penna Alla Vodak",
-        img: penneAllaVodak,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 0],
-        price: "$8.99"
-    },
-    {
-        name: "Risoto",
-        img: risoto,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 0, 0],
-        price: "$5.99"
-    },
-    {
-        name: "Splitza",
-        img: splitza,
+        name: "Campari",
+        img: drink3,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$12.99"
+        price: "$5.49"
+    },
+    {
+        name: "Coke",
+        img: drink4,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$3.99"
+    },
+    {
+        name: "Margarita",
+        img: drink5,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$4.59"
+    },
+    {
+        name: "Sangria",
+        img: drink6,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 0],
+        price: "$5.89"
     }
 ];
 
@@ -65,23 +64,28 @@ const CurrentMenu = styled.div`
     justify-content: space-between;
     gap: var(--space-30);
 
+    img {
+        border-radius: 50%
+    }
     @media (max-width: 68.75em) {
         grid-template-columns: repeat(2, 1fr);
     }
 `;
 
-const PopularMenu = () => {
+
+
+const Drinks = () => {
     return (
         <CurrentMenu>
-            {popular.map((meal, idx) => {
+            {drinks.map((drink, idx) => {
                 return (
                     <Meal
                         key={idx}
-                        name={meal.name}
-                        img={meal.img}
-                        description={meal.description}
-                        rating={meal.rating}
-                        price={meal.price}
+                        name={drink.name}
+                        img={drink.img}
+                        description={drink.description}
+                        rating={drink.rating}
+                        price={drink.price}
                     />
                 );
             })}
@@ -89,4 +93,4 @@ const PopularMenu = () => {
     );
 };
 
-export { PopularMenu };
+export { Drinks };

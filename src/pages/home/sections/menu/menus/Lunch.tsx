@@ -1,59 +1,60 @@
 import styled from "styled-components";
-import { Meal } from "./Meal";
-import cacio from "../../../../assets/dinner/cacio-e-pepe.png";
-import chickenpiccata from "../../../../assets/dinner/chicken-piccata.png";
-import eggplantdish from "../../../../assets/dinner/eggplant.png";
-import lasagna from "../../../../assets/dinner/lasagna.png";
-import minestrone from "../../../../assets/dinner/minestrone.png";
-import chili from "../../../../assets/dinner/turkey-chili.png";
 
-export const dinnerMeals = [
+import { Meal } from "../Meal";
+import lunch1 from "../../../../../assets/lunch/Eleganzo-special.png";
+import lunch2 from "../../../../../assets/lunch/gricia.png";
+import lunch3 from "../../../../../assets/lunch/meatloaf.png";
+import lunch4 from "../../../../../assets/lunch/old-fashioned-spagetti.png";
+import lunch5 from "../../../../../assets/lunch/stromboli.png";
+import lunch6 from "../../../../../assets/lunch/tetrazzini.png";
+
+export const lunches = [
     {
-        name: "Cacio e pepe",
-        img: cacio,
+        name: "Eleganzo Special",
+        img: lunch1,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$20.99"
+    },
+    {
+        name: "Gricia",
+        img: lunch2,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
+        price: "$9.49"
+    },
+    {
+        name: "Meatloaf",
+        img: lunch3,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$17.99"
+    },
+    {
+        name: "Old  Fashioned Spaghetti",
+        img: lunch4,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
         price: "$12.99"
     },
     {
-        name: "Chicken Piccata",
-        img: chickenpiccata,
+        name: "Stromboli",
+        img: lunch5,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$15.49"
+        price: "$16.75"
     },
     {
-        name: "Eggplant Parm",
-        img: eggplantdish,
+        name: "Tetrazzini",
+        img: lunch6,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$6.99"
-    },
-    {
-        name: "Lasagna",
-        img: lasagna,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 1],
-        price: "$19.99"
-    },
-    {
-        name: "Minestrone Soup",
-        img: minestrone,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 0, 0],
-        price: "$5.99"
-    },
-    {
-        name: "Turkey Chili",
-        img: chili,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 1],
         price: "$9.99"
     }
 ];
@@ -69,18 +70,18 @@ const CurrentMenu = styled.div`
     }
 `;
 
-const DinnerMenu = () => {
+const LunchMenu = () => {
     return (
         <CurrentMenu>
-            {dinnerMeals.map((dinnerMeal, idx) => {
+            {lunches.map((lunch, idx) => {
                 return (
                     <Meal
                         key={idx}
-                        name={dinnerMeal.name}
-                        img={dinnerMeal.img}
-                        description={dinnerMeal.description}
-                        rating={dinnerMeal.rating}
-                        price={dinnerMeal.price}
+                        name={lunch.name}
+                        img={lunch.img}
+                        description={lunch.description}
+                        rating={lunch.rating}
+                        price={lunch.price}
                     />
                 );
             })}
@@ -88,4 +89,4 @@ const DinnerMenu = () => {
     );
 };
 
-export { DinnerMenu };
+export { LunchMenu };

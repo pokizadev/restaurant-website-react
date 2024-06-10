@@ -1,60 +1,61 @@
-import { Meal } from "./Meal";
-import pizza1 from "../../../../assets/pizzas/regular.png";
-import pizza2 from "../../../../assets/pizzas/pepperoni.png";
-import pizza3 from "../../../../assets/pizzas/veggie.png";
-import pizza4 from "../../../../assets/pizzas/mushroom.png";
-import pizza5 from "../../../../assets/pizzas/chicken-pizza.png";
-import pizza6 from "../../../../assets/pizzas/fish-pizza.png";
 import styled from "styled-components";
 
-export const pizzas = [
+import { Meal } from "../Meal";
+import spaghetti from "../../../../../assets/popular/menu-spaghetti.png";
+import gnocchi from "../../../../../assets/popular/menu-gnocchi.png";
+import rovioli from "../../../../../assets/popular/menu-rovioli.png";
+import penneAllaVodak from "../../../../../assets/popular/menu-penne-alla-vodak.png";
+import risoto from "../../../../../assets/popular/menu-risoto.png";
+import splitza from "../../../../../assets/popular/menu-splitza.png";
+
+export const popular = [
     {
-        name: "Regular Pizza",
-        img: pizza1,
+        name: "Spaghetti",
+        img: spaghetti,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 1],
-        price: "$14.99"
+        price: "$12.99"
     },
     {
-        name: "Pepperoni Pizza",
-        img: pizza2,
+        name: "Gnocchi",
+        img: gnocchi,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$16.49"
+        price: "$7.49"
     },
     {
-        name: "Veggie Pizza",
-        img: pizza3,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 1],
-        price: "$15.99"
-    },
-    {
-        name: "Mushroom Pizza",
-        img: pizza4,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 1],
-        price: "$15.99"
-    },
-    {
-        name: "Chicken Pizza",
-        img: pizza5,
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
-        rating: [1, 1, 1, 1, 1],
-        price: "$18.75"
-    },
-    {
-        name: "Fish Pizza",
-        img: pizza6,
+        name: "Rovioli",
+        img: rovioli,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
         rating: [1, 1, 1, 1, 0],
-        price: "$19.99"
+        price: "$10.99"
+    },
+    {
+        name: "Penna Alla Vodak",
+        img: penneAllaVodak,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 0],
+        price: "$8.99"
+    },
+    {
+        name: "Risoto",
+        img: risoto,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 0, 0],
+        price: "$5.99"
+    },
+    {
+        name: "Splitza",
+        img: splitza,
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        rating: [1, 1, 1, 1, 1],
+        price: "$12.99"
     }
 ];
 
@@ -69,18 +70,18 @@ const CurrentMenu = styled.div`
     }
 `;
 
-const Pizzas = () => {
+const PopularMenu = () => {
     return (
         <CurrentMenu>
-            {pizzas.map((pizza, idx) => {
+            {popular.map((meal, idx) => {
                 return (
                     <Meal
                         key={idx}
-                        name={pizza.name}
-                        img={pizza.img}
-                        description={pizza.description}
-                        rating={pizza.rating}
-                        price={pizza.price}
+                        name={meal.name}
+                        img={meal.img}
+                        description={meal.description}
+                        rating={meal.rating}
+                        price={meal.price}
                     />
                 );
             })}
@@ -88,4 +89,4 @@ const Pizzas = () => {
     );
 };
 
-export { Pizzas };
+export { PopularMenu };

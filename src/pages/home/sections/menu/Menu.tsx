@@ -2,12 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../../../../design-system/button/Button.js";
 import { Container } from "../../../components";
-import { PopularMenu } from "./Popular";
-import { LunchMenu } from "./Lunch";
-import { DinnerMenu } from "./Dinner";
-import { Pizzas } from "./Pizzas";
-import { Desserts } from "./Desserts";
-import { Drinks } from "./Drinks";
+import { PopularMenu, LunchMenu, DinnerMenu, Pizzas, Desserts, Drinks } from "./menus";
 
 const MenuSectionContent = styled.div`
     padding-top: var(--space-120);
@@ -20,7 +15,7 @@ const MenuTitle = styled.h2`
 
 const MenuFilters = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 60px;
