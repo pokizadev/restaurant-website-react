@@ -1,7 +1,7 @@
 import "./Button.css"
 
 export const Button = (props) => {
-    const {size, color} = props;
+    const {size, color, children, onClick} = props;
     const classNames = {
         sm: "btn-sm",
         md: "btn-md",
@@ -13,7 +13,9 @@ export const Button = (props) => {
         white: "btn-white"
     }
     return (
-        <button className={`btn ${classNames[size]} ${classNames[color]}`}>{props.children}
+        <button 
+        onClick={onClick}
+        className={`btn ${classNames[size]} ${classNames[color]}`}>{children}
         </button>
     );
 };
