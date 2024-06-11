@@ -17,15 +17,19 @@ const colorClassNames = {
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const {size, color, children, onClick} = props;
+    const {size, color, className, children, onClick} = props;
     
     const sizeClassName = size !== undefined ? sizeClassNames[size] : "";
 
+
     const colorClassName = color !== undefined ? colorClassNames[color] : "";
+
+    const finalClassNames = `btn ${colorClassName} ${sizeClassName} ${className || ""}`;
+    
     return (
         <button 
         onClick={onClick}
-        className={`btn ${sizeClassName} ${colorClassName}`}>{children}
+        className={finalClassNames}>{children}
         </button>
     );
 };

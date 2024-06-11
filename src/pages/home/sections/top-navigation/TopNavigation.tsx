@@ -4,7 +4,7 @@ import { useState } from "react";
 import logo from "../../../../assets/logoe.svg";
 import cart from "../../../../assets/cart.svg";
 import mobileNavIcon from "../../../../assets/Home.svg";
-import { Button } from "../../../../design-system/button/Button.js";
+import { Button } from "../../../../design-system/button/Button";
 import { MobileNavigation } from "./MobileNavigation";
 import { Container } from "../../../components";
 

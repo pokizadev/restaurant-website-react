@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button } from "../../../../design-system/button/Button.js";
+import { Button } from "../../../../design-system/button/Button";
 import { Container } from "../../../components";
 import { PopularMenu, LunchMenu, DinnerMenu, Pizzas, Desserts, Drinks } from "./menus";
 
@@ -12,14 +12,15 @@ const MenuSectionContent = styled.div`
 const MenuTitle = styled.h2`
     text-align: center;
     color: var(--dark-brown);
+    margin-bottom: var(--space-80);
 `;
 
 const MenuFilters = styled.div`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: var(--space-30);
+    margin-bottom: var(--space-80);
     overflow-x: auto;
     scrollbar-width: none;
 `;

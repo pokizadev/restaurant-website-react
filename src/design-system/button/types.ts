@@ -7,6 +7,7 @@ export type ButtonColor = "green" | "orange" | "black" | "gray" | "white"
 export type ButtonProps = {
     size?: ButtonSize
     color?: ButtonColor
+    className?: string
     children?: React.ReactNode
     onClick?: () => void;
 }

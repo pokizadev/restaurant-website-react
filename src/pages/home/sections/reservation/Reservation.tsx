@@ -50,6 +50,8 @@ const ReservationRight = styled.div`
 
     h2 {
         color: var(--dark-brown);
+    margin-bottom: var(--space-50);
+
     }
 
     p {

@@ -75,16 +75,16 @@ const MealFooter = styled.div`
         }
     }
 
-    .btn-sm {
+    .btn-small {
         display: none;
     }
 
     @media (max-width: 43.75em) {
-        .btn-md {
+        .btn-medium {
             display: none;
         }
 
-        .btn-sm {
+        .btn-small {
             display: flex;
             align-items: center;
         }
@@ -127,7 +127,7 @@ const Meal: React.FC<MealProps> = (props) => {
                     Order Now
                 </Button>
 
-                <Button className="plus" size="sm" color="orange">
+                <Button size="sm" color="orange">
                     +
                 </Button>
             </MealFooter>

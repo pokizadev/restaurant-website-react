@@ -42,6 +42,11 @@ const WelcomeRight = styled.div`
     }
 `;
 
+const WelcomeTitle = styled.h2`
+    color: var(--dark-brown);
+    margin-bottom: var(--space-50);
+`
+
 const WelcomeDescription = styled.p`
     margin-bottom: var(--space-120);
 `;
@@ -59,9 +64,9 @@ const Welcome = () => {
                     <StyledImg src={salad} alt="Salad" />
                 </WelcomeLeft>
                 <WelcomeRight>
-                    <h2 className="heading-1">
+                    <WelcomeTitle className="heading-1">
                         Welcome to <span>EleGanzo</span>
-                    </h2>
+                    </WelcomeTitle>
                     <WelcomeDescription className="paragraph-lg">
                         Eleganzo offers an exquisite dining experience with its
                         innovative menu, featuring fresh, locally sourced
