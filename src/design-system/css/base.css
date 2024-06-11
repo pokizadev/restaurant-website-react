@@ -40,12 +40,7 @@ a {
     text-decoration: none;
 }
 
-h2 {
-    font-size: 60px;
-    line-height: 70px;
-    color: var(--dark-brown);
-    margin-bottom: 50px;
-}
+
 
 .welcome-section__right p,
 .reservation-section__right p {
