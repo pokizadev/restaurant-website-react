@@ -11,6 +11,7 @@ const MenuSectionContent = styled.div`
 
 const MenuTitle = styled.h2`
     text-align: center;
+    color: var(--dark-brown);
 `;
 
 const MenuFilters = styled.div`

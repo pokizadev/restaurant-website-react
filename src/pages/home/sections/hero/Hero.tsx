@@ -31,7 +31,6 @@ const Span = styled.span`
     width: max-content;
     margin-bottom: 24px;
     background-color: var(--orange);
-    color: var(--orange);
     border-radius: var(--border-radius-123);
     padding: var(--space-6) var(--space-20);
     opacity: 20%;
