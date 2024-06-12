@@ -4,6 +4,8 @@ import twitter from "../../../../assets/twitter.svg";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
 import logo from "../../../../assets/logoe.svg";
+import { Container } from "../../../components";
+import styled from "styled-components";
 
 const pageLinks = [
     { text: "Home", link: "abc.com" },
@@ -25,47 +27,97 @@ const contactLinks = [
     { text: "+123 4567 8901", link: "tel:+123 4567 8901" }
 ];
 
+const FooterContainer = styled(Container)`
+    background-color: var(--dark-brown);
+    padding-top: var(--space-80);
+    padding-bottom: var(--space-80);
+
+    @media (max-widht: 50em) {
+        padding-top: var(--space-40);
+        padding-bottom: var(--space-40);
+    }
+`;
+
+const FooterContent = styled.div`
+    display: flex;
+    gap: var(--space-50);
+
+    margin-bottom: var(--space-80);
+    justify-content: space-between;
+    color: #e3e2e0;
+
+    @media (max-width: 56.25em) {
+        margin-bottom: var(--space-40);
+    }
+
+    @media (max-width: 43.75em) {
+        flex-direction: column;
+    }
+`;
+
+const BrandColumn = styled.div`
+    width: 60%;
+`;
+
+const LogoWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-40);
+    gap: var(--space-10);
+
+    p {
+        color: var(--white);
+    }
+`;
+const Description = styled.p`
+    letter-spacing: 0.12rem;
+`;
+const SocialIconsWrapper = styled.div`
+    display: flex;
+    gap: var(--space-20);
+    margin-top: var(--space-40);
+`;
+const SocialIcon = styled.img`
+    @media (max-width: 62.5em) {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    @media (max-width: 43.75em) {
+        width: 6rem;
+        height: 6rem;
+    }
+`;
+
+const OtherColums = styled.div`
+    display: grid;
+    gap: var(--space-50);
+    grid-template-columns: repeat(3, 1fr);
+`;
+
 const Footer = () => {
     return (
-        <footer id="footer">
-            <div className="sections-container footer__container">
-                <div className="footer__content">
-                    <div className="footer__brand">
-                        <div className="footer__logo-wrapper">
-                            <img
-                                src={logo}
-                                alt="Logo"
-                                className="footer__logo"
-                            />
-                            <p className="footer__logo-text">
-                                Ele<span>Ganzo</span>
-                            </p>
-                        </div>
-
-                        <p className="footer__description">
-                            Taste the Difference, Explore Our Menu and Stay
-                            Connected. Follow Us on Social Media for Updates,
-                            Specials, and More!
+        <FooterContainer id="footer">
+            <FooterContent>
+                <BrandColumn>
+                    <LogoWrapper>
+                        <img src={logo} alt="Logo" className="footer__logo" />
+                        <p className="subtitle-lg">
+                            Ele<span>Ganzo</span>
                         </p>
-                        <div className="footer__social-icons">
-                            <img
-                                className="footer__social-icon"
-                                src={twitter}
-                                alt="Twitter"
-                            />
-                            <img
-                                className="footer__social-icon"
-                                src={instagram}
-                                alt="Instagram"
-                            />
-                            <img
-                                className="footer__social-icon"
-                                src={facebook}
-                                alt="Facebook"
-                            />
-                        </div>
-                    </div>
-
+                    </LogoWrapper>
+                    <Description className="paragraph-md">
+                        Taste the Difference, Explore Our Menu and Stay
+                        Connected. Follow Us on Social Media for Updates,
+                        Specials, and More!
+                    </Description>
+                    <SocialIconsWrapper>
+                        <SocialIcon src={twitter} alt="Twitter" />
+                        <SocialIcon src={instagram} alt="Instagram" />
+                        <SocialIcon src={facebook} alt="Facebook" />
+                    </SocialIconsWrapper>
+                </BrandColumn>
+                <OtherColums>
                     <div className="footer__pages">
                         <h4 className="footer__heading">Page</h4>
                         {pageLinks.map((link, idx) => {
@@ -110,12 +162,10 @@ const Footer = () => {
                             );
                         })}
                     </div>
-                </div>
-                <p className="footer__text text-end">
-                    Copyright © 2023 EleGanzo
-                </p>
-            </div>
-        </footer>
+                </OtherColums>
+            </FooterContent>
+            <p className="footer__text text-end">Copyright © 2023 EleGanzo</p>
+        </FooterContainer>
     );
 };
 
