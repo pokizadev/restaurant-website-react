@@ -9,6 +9,8 @@ import rightIcon from "../../../../assets/forward-arrow.png";
 
 const TestimonialsContainer = styled(Container)`
     background-image: url(${background});
+    width: 100%;
+    height: auto;
     background-position: top;
     background-color: #fbfafa;
     background-size: cover;
@@ -16,7 +18,6 @@ const TestimonialsContainer = styled(Container)`
 
     @media (max-width: 62.5em) {
     background-size: contain;
-
     }
 
 `;

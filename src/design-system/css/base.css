@@ -42,14 +42,6 @@ a {
 
 
 
-.welcome-section__right p,
-.reservation-section__right p {
-    color: var(--light-brown);
-    font-size: 20px;
-    line-height: 40px;
-    margin-bottom: 40px;
-}
-
 .hero-section__container,
 .menu-section__container,
 .chefs-section__container,
@@ -63,9 +55,3 @@ a {
     }
 }
 
-/*Container */
-
-.sections-container {
-    max-width: 1440px;
-    margin: 0 auto;
-}
