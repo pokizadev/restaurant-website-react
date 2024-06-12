@@ -50,8 +50,8 @@
 }
 
 .heading-2 {
-    font-size: var(--font-size-80);
-    line-height: var(--line-height-100);
+    font-size: var(--font-size-64);
+    line-height: var(--line-height-70);
 }
 
 .heading-3 {
