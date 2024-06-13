@@ -1,5 +1,3 @@
-import "./Footer.css";
-
 import twitter from "../../../../assets/twitter.svg";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
@@ -50,13 +48,17 @@ const FooterContent = styled.div`
         margin-bottom: var(--space-40);
     }
 
-    @media (max-width: 43.75em) {
+    @media (max-width: 47em) {
         flex-direction: column;
     }
 `;
 
 const BrandColumn = styled.div`
-    width: 60%;
+    width: 40%;
+
+    @media (max-width: 47em) {
+        width: 100%;
+    }
 `;
 
 const LogoWrapper = styled.div`
@@ -83,18 +85,62 @@ const SocialIcon = styled.img`
         width: 3rem;
     }
 
-    @media (max-width: 43.75em) {
+    @media (max-width: 47em) {
         width: 6rem;
         height: 6rem;
     }
 `;
 
-const OtherColums = styled.div`
+const OtherColumns = styled.div`
     display: grid;
     gap: var(--space-50);
     grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 56.25em) {
+        gap: var(--space-30);
+    }
+
+    @media (max-width: 47em) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+const ColumnHeading = styled.h4`
+    color: var(--orange);
+    font-size: var(--font-size-24);
+    line-height: var(--line-height-32);
+    margin-bottom: var(--space-20);
+    margin-top: var(--font-size-10);
+`;
+const ColumnLinks = styled.a`
+    color: #e3e2e0;
+    font-size: var(--font-size-20);
+    line-height: var(--line-height-28);
+    display: block;
+    margin-bottom: var(--space-20);
+
+    @media (max-width: 47em) {
+        font-size: var(--font-size-24);
+        letter-spacing: 0.15rem;
+    }
+`;
+
+const CopyRight = styled.p`
+    color: #e3e2e0;
+    text-align: center;
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-24);
+
+    @media (max-width: 47em) {
+        text-align: start;
+        font-size: var(--font-size-20);
+        letter-spacing: 0.15rem;
+    }
+`;
 const Footer = () => {
     return (
         <FooterContainer id="footer">
@@ -117,54 +163,42 @@ const Footer = () => {
                         <SocialIcon src={facebook} alt="Facebook" />
                     </SocialIconsWrapper>
                 </BrandColumn>
-                <OtherColums>
-                    <div className="footer__pages">
-                        <h4 className="footer__heading">Page</h4>
+                <OtherColumns>
+                    <Column>
+                        <ColumnHeading>Page</ColumnHeading>
                         {pageLinks.map((link, idx) => {
                             return (
-                                <a
-                                    key={idx}
-                                    href={link.link}
-                                    className="footer__text"
-                                >
+                                <ColumnLinks key={idx} href={link.link}>
                                     {link.text}
-                                </a>
+                                </ColumnLinks>
                             );
                         })}
-                    </div>
+                    </Column>
 
-                    <div className="footer__about">
-                        <h4 className="footer__heading">Information</h4>
+                    <Column>
+                        <ColumnHeading>Information</ColumnHeading>
                         {informationLinks.map((link, idx) => {
                             return (
-                                <a
-                                    key={idx}
-                                    href={link.link}
-                                    className="footer__text"
-                                >
+                                <ColumnLinks key={idx} href={link.link}>
                                     {link.text}
-                                </a>
+                                </ColumnLinks>
                             );
                         })}
-                    </div>
+                    </Column>
 
-                    <div className="footer__contact">
-                        <h4 className="footer__heading">Get in touch</h4>
+                    <Column>
+                        <ColumnHeading>Get in touch</ColumnHeading>
                         {contactLinks.map((link, idx) => {
                             return (
-                                <a
-                                    key={idx}
-                                    href={link.link}
-                                    className="footer__text"
-                                >
+                                <ColumnLinks key={idx} href={link.link}>
                                     {link.text}
-                                </a>
+                                </ColumnLinks>
                             );
                         })}
-                    </div>
-                </OtherColums>
+                    </Column>
+                </OtherColumns>
             </FooterContent>
-            <p className="footer__text text-end">Copyright © 2023 EleGanzo</p>
+            <CopyRight>Copyright © 2023 EleGanzo</CopyRight>
         </FooterContainer>
     );
 };
