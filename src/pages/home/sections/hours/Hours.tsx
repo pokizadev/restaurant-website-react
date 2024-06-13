@@ -35,7 +35,8 @@ const HoursContent = styled.div`
     }
 `;
 
-const HoursWrapper = styled.div``;
+const HoursWrapper = styled.div`
+`;
 
 const Title = styled.h2`
     color: var(--white);
@@ -60,6 +61,7 @@ const TextWrapper = styled.div`
 const ButtonsWrapper = styled.div`
     display: flex;
     gap: var(--space-16);
+    justify-content: center;
 `;
 
 const Hours = () => {

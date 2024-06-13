@@ -48,7 +48,7 @@ const FooterContent = styled.div`
         margin-bottom: var(--space-40);
     }
 
-    @media (max-width: 47em) {
+    @media (max-width: 62.5em) {
         flex-direction: column;
     }
 `;
@@ -56,8 +56,8 @@ const FooterContent = styled.div`
 const BrandColumn = styled.div`
     width: 40%;
 
-    @media (max-width: 47em) {
-        width: 100%;
+    @media (max-width: 62.5em) {
+        width: 90%;
     }
 `;
 
@@ -70,6 +70,8 @@ const LogoWrapper = styled.div`
     p {
         color: var(--white);
     }
+
+    
 `;
 const Description = styled.p`
     letter-spacing: 0.12rem;
@@ -78,23 +80,29 @@ const SocialIconsWrapper = styled.div`
     display: flex;
     gap: var(--space-20);
     margin-top: var(--space-40);
+
+    @media (max-width: 62.5em) {
+        margin-bottom: var(--space-40);
+    }
 `;
 const SocialIcon = styled.img`
-    @media (max-width: 62.5em) {
+    /* @media (max-width: 62.5em) {
         height: 3rem;
         width: 3rem;
-    }
+    } */
 
-    @media (max-width: 47em) {
+    /* @media (max-width: 47em) {
         width: 6rem;
         height: 6rem;
-    }
+    } */
 `;
 
 const OtherColumns = styled.div`
     display: grid;
     gap: var(--space-50);
     grid-template-columns: repeat(3, 1fr);
+
+
 
     @media (max-width: 56.25em) {
         gap: var(--space-30);
