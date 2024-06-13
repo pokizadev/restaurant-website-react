@@ -30,10 +30,10 @@ const Span = styled.span`
     display: block;
     width: max-content;
     margin-bottom: 24px;
-    background-color: var(--orange);
+    background-color: #ffe8cc;
+    color: var(--orange);
     border-radius: var(--border-radius-123);
     padding: var(--space-6) var(--space-20);
-    opacity: 20%;
 `;
 
 const Heading = styled.h1`
