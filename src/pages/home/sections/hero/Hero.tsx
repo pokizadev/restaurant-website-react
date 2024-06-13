@@ -5,8 +5,8 @@ import { Button } from "../../../../design-system/button/Button";
 import { Container } from "../../../components";
 
 const HeroSectionContent = styled.div`
-    padding-top: var(--space-100);
-    padding-bottom: var(--space-100);
+    padding-top: var(--space-80);
+    padding-bottom: var(--space-80);
     display: flex;
     align-items: center;
     gap: var(--space-40);

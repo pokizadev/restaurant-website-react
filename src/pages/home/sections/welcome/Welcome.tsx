@@ -5,7 +5,6 @@ import { Container } from "../../../components";
 
 const WelcomeSectionContainer = styled(Container)`
     background-color: #3fc66e1a;
-    padding-right: 0;
 `;
 
 const Content = styled.div`
@@ -20,8 +19,7 @@ const Content = styled.div`
         grid-template-rows: auto auto;
     }
 
-    @media (max-width: 50em) {
-        padding-top: var(--space-40);
+    @media (max-width: 62.5em) {
         padding-bottom: var(--space-40);
     }
 `;
@@ -40,6 +38,8 @@ const WelcomeRight = styled.div`
     @media (max-width: 62.5em) {
         width: 100%;
     }
+
+
 `;
 
 const WelcomeTitle = styled.h2`
@@ -49,6 +49,10 @@ const WelcomeTitle = styled.h2`
 
 const WelcomeDescription = styled.p`
     margin-bottom: var(--space-120);
+
+    @media (max-width: 50em) {
+        margin-bottom: var(--space-80);
+    }
 `;
 
 const StyledImg = styled.img`

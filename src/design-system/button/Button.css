@@ -6,7 +6,7 @@
 
 .btn-small {
     height: var(--space-50);
-    font-size: var(--font-size-30);
+    font-size: var(--font-size-18);
     border-radius: var(--border-radius-133);
     padding-left: var(--space-36);
     padding-right: var(--space-36);

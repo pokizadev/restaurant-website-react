@@ -7,8 +7,8 @@ const ReservationContainer = styled(Container)`
     background-color: #fff4e766;
 `;
 const ReservationContent = styled.div`
-  padding-top: var(--space-80);
-    padding-bottom: var(--space-64);
+    padding-top: var(--space-80);
+    padding-bottom: var(--space-80);
     display: flex;
     align-items: center;
     gap: var(--space-40);
@@ -17,6 +17,10 @@ const ReservationContent = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
+    }
+
+    @media (max-width: 50em) {
+        padding-top: var(--space-40);
     }
 `;
 
@@ -32,6 +36,8 @@ const ReservationLeft = styled.figure`
         width: 100%;
         padding-top: 0;
         order: 2;
+        padding-bottom: var(--space-20);
+
     }
 `;
 
@@ -43,20 +49,20 @@ const ReservationRight = styled.div`
 
     @media (max-width: 68.75em) {
         width: 100%;
-        padding-top: var(--space-80);
+        padding-top: var(--space-20);
         padding-bottom: var(--space-80);
         order: 1;
     }
 
     h2 {
         color: var(--dark-brown);
-    margin-bottom: var(--space-50);
-
+        margin-bottom: var(--space-30);
     }
 
     p {
-        margin-bottom: var(--space-80);
+        margin-bottom: var(--space-60);
         color: var(--light-brown);
+
     }
 `;
 
