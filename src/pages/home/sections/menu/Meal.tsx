@@ -87,6 +87,7 @@ const MealFooter = styled.div`
         .btn-small {
             display: flex;
             align-items: center;
+            justify-content: center;
         }
     }
 `;

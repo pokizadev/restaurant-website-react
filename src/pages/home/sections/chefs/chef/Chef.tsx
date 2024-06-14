@@ -7,7 +7,7 @@ const ChefItem = styled.div`
         width: 100%;
         height: auto;
         border-radius: var(--space-50);
-        margin-bottom: var(--space-40)
+        margin-bottom: var(--space-40);
     }
     &:first-child img {
         background-color: #c4c4c4;

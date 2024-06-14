@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../../../../design-system/button/Button";
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 import { PopularMenu, LunchMenu, DinnerMenu, Pizzas, Desserts, Drinks } from "./menus";
 
-const MenuSectionContent = styled.div`
-    padding-top: var(--space-120);
-    padding-bottom: var(--space-120);
+const MenuSectionContent = styled(Content)`
+    /* padding-top: var(--space-120);
+    padding-bottom: var(--space-120); */
 `;
 
 const MenuTitle = styled.h2`

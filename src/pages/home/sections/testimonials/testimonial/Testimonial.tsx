@@ -58,7 +58,7 @@ const Testimonial: FC<TestimonialProps> = (props) => {
             <TestimonialImage src={props.img} alt={props.name} />
             <Name className="subtitle-lg">{props.name}</Name>
             <Position className="heading-3">{props.position}</Position>
-            <Text className="paragraph-md">{props.text}</Text>
+            <Text className="paragraph-lg">{props.text}</Text>
         </TestimonialItem>
     );
 };

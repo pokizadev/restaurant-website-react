@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 import { Testimonial } from "./testimonial/Testimonial";
 import background from "../../../../assets/customers.png";
 import { customers } from "./testimonial/data";
@@ -13,20 +13,21 @@ const TestimonialsContainer = styled(Container)`
     height: auto;
     background-position: top;
     background-color: #fbfafa;
-    background-size: cover;
-    background-repeat: unset;
-
-    @media (max-width: 62.5em) {
     background-size: contain;
-    }
+
 
 `;
 
-const TestimonialsContent = styled.div`
+const TestimonialsContent = styled(Content)`
     position: relative;
     text-align: center;
-    padding-top: var(--space-120);
+    padding-top: 20rem;
     padding-bottom: 30rem;
+
+    @media (max-width: 62.5em) {
+        padding-top: 10rem;
+        padding-bottom: 20rem;
+    }
 `;
 const Title = styled.h2`
     margin-bottom: var(--space-100);

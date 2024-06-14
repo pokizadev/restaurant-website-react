@@ -1,15 +1,23 @@
 import styled from "styled-components";
 import salad from "../../../../assets/salad.png";
 import { Button } from "../../../../design-system/button/Button";
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 
 const WelcomeSectionContainer = styled(Container)`
     background-color: #3fc66e1a;
+
+    @media (max-width: 75em) {
+        padding-right: 0;
+    }
+
+    @media (max-width: 62.5em) {
+        padding-right: var(--space-80);
+
+    }
+
 `;
 
-const Content = styled.div`
-    padding-top: var(--space-80);
-    padding-bottom: var(--space-80);
+const WelcomeContent = styled(Content)`
     display: flex;
     align-items: center;
 
@@ -17,10 +25,6 @@ const Content = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-    }
-
-    @media (max-width: 62.5em) {
-        padding-bottom: var(--space-40);
     }
 `;
 const WelcomeLeft = styled.div`
@@ -38,20 +42,22 @@ const WelcomeRight = styled.div`
     @media (max-width: 62.5em) {
         width: 100%;
     }
-
-
 `;
 
 const WelcomeTitle = styled.h2`
     color: var(--dark-brown);
     margin-bottom: var(--space-50);
-`
+
+    @media (max-width: 68.75em) {
+        margin-bottom: var(--space-30);
+    }
+`;
 
 const WelcomeDescription = styled.p`
     margin-bottom: var(--space-120);
 
-    @media (max-width: 50em) {
-        margin-bottom: var(--space-80);
+    @media (max-width: 75em) {
+        margin-bottom: var(--space-60);
     }
 `;
 
@@ -63,7 +69,7 @@ const StyledImg = styled.img`
 const Welcome = () => {
     return (
         <WelcomeSectionContainer id="welcome-section">
-            <Content>
+            <WelcomeContent>
                 <WelcomeLeft>
                     <StyledImg src={salad} alt="Salad" />
                 </WelcomeLeft>
@@ -80,7 +86,7 @@ const Welcome = () => {
                         See Our Menu
                     </Button>
                 </WelcomeRight>
-            </Content>
+            </WelcomeContent>
         </WelcomeSectionContainer>
     );
 };

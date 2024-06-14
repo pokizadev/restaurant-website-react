@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 import hero from "../../../../assets/hero.png"
 import { Button } from "../../../../design-system/button/Button";
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 
-const HeroSectionContent = styled.div`
-    padding-top: var(--space-80);
-    padding-bottom: var(--space-80);
+const HeroSectionContent = styled(Content)`
     display: flex;
     align-items: center;
     gap: var(--space-40);

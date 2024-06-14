@@ -2,18 +2,11 @@ import styled from "styled-components";
 import { Chef } from "./chef/Chef";
 import { chefs, chefs2 } from "./data";
 import { Button } from "../../../../design-system/button/Button";
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 import { useState } from "react";
 
-const ChefsContent = styled.div`
-    padding-top: var(--space-120);
-    padding-bottom: var(--space-120);
+const ChefsContent = styled(Content)`
     text-align: center;
-
-    @media (max-width: 50em) {
-        padding-top: var(--space-80);
-        padding-bottom: var(--space-80);
-    }
 `;
 
 const Title = styled.h2`

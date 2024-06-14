@@ -2,7 +2,7 @@ import twitter from "../../../../assets/twitter.svg";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
 import logo from "../../../../assets/logoe.svg";
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 import styled from "styled-components";
 
 const pageLinks = [
@@ -27,26 +27,13 @@ const contactLinks = [
 
 const FooterContainer = styled(Container)`
     background-color: var(--dark-brown);
-    padding-top: var(--space-80);
-    padding-bottom: var(--space-80);
-
-    @media (max-widht: 50em) {
-        padding-top: var(--space-40);
-        padding-bottom: var(--space-40);
-    }
 `;
 
-const FooterContent = styled.div`
+const FooterContent = styled(Content)`
     display: flex;
     gap: var(--space-50);
-
-    margin-bottom: var(--space-80);
     justify-content: space-between;
     color: #e3e2e0;
-
-    @media (max-width: 56.25em) {
-        margin-bottom: var(--space-40);
-    }
 
     @media (max-width: 62.5em) {
         flex-direction: column;
@@ -70,8 +57,6 @@ const LogoWrapper = styled.div`
     p {
         color: var(--white);
     }
-
-    
 `;
 const Description = styled.p`
     letter-spacing: 0.12rem;
@@ -85,24 +70,12 @@ const SocialIconsWrapper = styled.div`
         margin-bottom: var(--space-40);
     }
 `;
-const SocialIcon = styled.img`
-    /* @media (max-width: 62.5em) {
-        height: 3rem;
-        width: 3rem;
-    } */
-
-    /* @media (max-width: 47em) {
-        width: 6rem;
-        height: 6rem;
-    } */
-`;
+const SocialIcon = styled.img``;
 
 const OtherColumns = styled.div`
     display: grid;
     gap: var(--space-50);
     grid-template-columns: repeat(3, 1fr);
-
-
 
     @media (max-width: 56.25em) {
         gap: var(--space-30);
@@ -142,6 +115,10 @@ const CopyRight = styled.p`
     text-align: center;
     font-size: var(--font-size-16);
     line-height: var(--line-height-24);
+    padding-bottom: var(--font-size-80);
+    @media (max-width: 50em) {
+        padding-bottom: var(--font-size-40);
+    }
 
     @media (max-width: 47em) {
         text-align: start;

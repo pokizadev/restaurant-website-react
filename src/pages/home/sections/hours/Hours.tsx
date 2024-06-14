@@ -1,4 +1,4 @@
-import { Container } from "../../../components";
+import { Container, Content } from "../../../components";
 import styled from "styled-components";
 import hoursBackground from "../../../../assets/business-hours.png";
 import { Button } from "../../../../design-system/button/Button";
@@ -6,6 +6,11 @@ import { Button } from "../../../../design-system/button/Button";
 const HoursContainer = styled(Container)`
     padding-top: var(--space-80);
     padding-bottom: var(--space-80);
+
+    @media (max-width: 50em) {
+        padding-top: var(--space-40);
+        padding-bottom: var(--space-40);
+    }
 `;
 
 const HoursContent = styled.div`
@@ -13,6 +18,7 @@ const HoursContent = styled.div`
     height: 75rem;
     margin: 0 auto;
     border-radius: 15rem;
+    padding: 0 2rem;
 
     background-image: url(${hoursBackground});
 
@@ -27,11 +33,6 @@ const HoursContent = styled.div`
 
     @media (max-width: 31.25em) {
         height: 60rem;
-    }
-
-    @media (max-width: 50em) {
-        padding-top: var(--space-40);
-        padding-bottom: var(--space-40);
     }
 `;
 
@@ -62,6 +63,12 @@ const ButtonsWrapper = styled.div`
     display: flex;
     gap: var(--space-16);
     justify-content: center;
+
+    @media (max-width: 25em) {
+        flex-direction: column;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 `;
 
 const Hours = () => {
