@@ -16,7 +16,7 @@ export const links = [
     { text: "Menu", link: "menu" },
     { text: "About Us", link: "about-us" },
     { text: "Reservation", link: "reservation" },
-    { text: "Contact Us", link: "contact-us" },
+    { text: "Contact Us", link: "contact-us" }
 ];
 
 const Navigation = styled.nav`

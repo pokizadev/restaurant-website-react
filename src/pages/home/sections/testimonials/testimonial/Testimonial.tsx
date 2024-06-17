@@ -23,8 +23,8 @@ const TestimonialImage = styled.img`
     }
 
     @media (max-width: 31.25em) {
-        height: 15rem;
-        width: 15rem;
+        /* height: 20rem;
+        width: 20rem; */
     }
 `;
 
