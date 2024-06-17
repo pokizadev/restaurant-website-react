@@ -12,12 +12,11 @@ import { Container } from "../../../components";
 import { AccountModal } from "./manageAccountModal";
 
 export const links = [
-    { text: "Home", link: "https://google.com" },
-    { text: "Menu", link: "https://facebook.com" },
-    { text: "About Us", link: "" },
-    { text: "Reservation", link: "" },
-    { text: "Contact Us", link: "" },
-    { text: "Branding", link: "./branding.html" }
+    { text: "Home", link: "/" },
+    { text: "Menu", link: "menu" },
+    { text: "About Us", link: "about-us" },
+    { text: "Reservation", link: "reservation" },
+    { text: "Contact Us", link: "contact-us" },
 ];
 
 const Navigation = styled.nav`
