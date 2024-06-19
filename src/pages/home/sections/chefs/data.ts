@@ -49,8 +49,8 @@ export const chefs2 = [
     },
     {
         img: chef8,
-        name: "Frank Smith",
-        position: "Chef Assistant"
+        name: "Ismail Marzuki",
+        position: "Executive Chef"
     },
     
 ]

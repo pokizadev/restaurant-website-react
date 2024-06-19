@@ -12,8 +12,8 @@ const Container = styled.section`
     }
 
     @media (max-width: 31.25em) {
-        padding-left: var(--space-10);
-        padding-right: var(--space-10);
+        padding-left: var(--space-24);
+        padding-right: var(--space-24);
     }
 `;
 

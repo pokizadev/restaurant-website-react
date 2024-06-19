@@ -1,22 +1,23 @@
-import twitter from "../../../../assets/twitter.svg";
+import styled from "styled-components";import twitter from "../../../../assets/twitter.svg";
+
+import { Container, Content } from "../../../components";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
 import logo from "../../../../assets/logoe.svg";
-import { Container, Content } from "../../../components";
-import styled from "styled-components";
+
 
 const pageLinks = [
-    { text: "Home", link: "abc.com" },
-    { text: "Menu", link: "abc.com" },
-    { text: "Order Online", link: "abc.com" },
-    { text: "Catering", link: "abc.com" },
-    { text: "Reservation", link: "abc.com" }
+    { text: "Home", link: "/" },
+    { text: "Menu", link: "menu" },
+    { text: "Order Online", link: "" },
+    { text: "Catering", link: "" },
+    { text: "Reservation", link: "reservation" }
 ];
 
 const informationLinks = [
-    { text: "About Us", link: "abc.com" },
-    { text: "Testimonials", link: "abc.com" },
-    { text: "Events", link: "abc.com" }
+    { text: "About Us", link: "about-us" },
+    { text: "Testimonials", link: "testimonials" },
+    { text: "Events", link: "" }
 ];
 
 const contactLinks = [

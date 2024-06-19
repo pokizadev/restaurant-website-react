@@ -10,13 +10,14 @@ import closeIcon from "../../../../assets/close (2).png";
 import { MobileNavigation } from "./MobileNavigation";
 import { Container } from "../../../components";
 import { AccountModal } from "./manageAccountModal";
+import { NavLink } from "react-router-dom";
 
 export const links = [
     { text: "Home", link: "/" },
     { text: "Menu", link: "menu" },
     { text: "About Us", link: "about-us" },
     { text: "Reservation", link: "reservation" },
-    { text: "Contact Us", link: "contact-us" },
+    { text: "Contact Us", link: "contact-us" }
 ];
 
 const Navigation = styled.nav`
@@ -45,11 +46,15 @@ const NavigationLinks = styled.ul`
     }
 `;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
     color: var(--dark-brown);
 
     &:hover,
     &:focus {
+        color: var(--orange);
+    }
+
+    &.active {
         color: var(--orange);
     }
 `;
@@ -125,7 +130,7 @@ const TopNavigation = () => {
                     {links.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <Link className="paragraph-sm" href={link.link}>
+                                <Link className="paragraph-sm" to={link.link} end>
                                     {link.text}
                                 </Link>
                             </li>
