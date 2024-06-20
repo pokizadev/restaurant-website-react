@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { links } from "./TopNavigation";
 import { Button } from "../../../../design-system/button/Button";
+import { useNavigate } from "react-router-dom";
 
 const MobileNavContent = styled.div`
     width: 100%;
@@ -73,6 +74,8 @@ const StyledButton = styled(Button)`
     margin-top: 1rem;
 `;
 const MobileNavigation = () => {
+    const navigate = useNavigate();
+
     return (
         <MobileNavContent>
             <MobileNavTop>
@@ -92,10 +95,16 @@ const MobileNavigation = () => {
                             </li>
                         );
                     })}
-                    <StyledButton size="sm" color="orange">
+                    <StyledButton
+                        size="sm"
+                        color="orange"
+                        onClick={() => {
+                            navigate("sign-up");
+                        }}
+                    >
                         Sign Up
                     </StyledButton>
-                    <StyledButton size="sm" color="green">
+                    <StyledButton size="sm" color="green" onClick={() => {navigate("login")}}>
                         Sign In
                     </StyledButton>
                 </MobileNavLinks>

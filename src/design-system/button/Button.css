@@ -60,4 +60,5 @@
 .btn-white {
     background-color: var(--white);
     color: var(--dark-brown);
+    border: 0.1rem solid #b6a38b;
 }
