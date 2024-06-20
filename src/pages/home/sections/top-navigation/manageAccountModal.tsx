@@ -1,5 +1,6 @@
 import { Button } from "../../../../design-system/button/Button";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const ModalWrapper = styled.div`
     width: 24rem;
@@ -18,12 +19,13 @@ const ModalWrapper = styled.div`
     gap: 2rem;
 `;
 const AccountModal = () => {
+    const navigate = useNavigate()
     return (
         <ModalWrapper>
-            <Button size="md" color="orange">
+            <Button size="md" color="orange" onClick={() => {navigate("sign-up")}}>
                 Sign Up
             </Button>
-            <Button size="md" color="green">
+            <Button size="md" color="green" onClick={() => {navigate("login")}}>
                 Sign In
             </Button>
         </ModalWrapper>
