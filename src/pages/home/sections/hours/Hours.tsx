@@ -2,6 +2,7 @@ import { Container, Content } from "../../../components";
 import styled from "styled-components";
 import hoursBackground from "../../../../assets/business-hours.png";
 import { Button } from "../../../../design-system/button/Button";
+import { useNavigate } from "react-router-dom";
 
 const HoursContainer = styled(Container)`
     padding-top: var(--space-80);
@@ -36,8 +37,7 @@ const HoursContent = styled.div`
     }
 `;
 
-const HoursWrapper = styled.div`
-`;
+const HoursWrapper = styled.div``;
 
 const Title = styled.h2`
     color: var(--white);
@@ -72,6 +72,7 @@ const ButtonsWrapper = styled.div`
 `;
 
 const Hours = () => {
+    const navigate = useNavigate();
     return (
         <HoursContainer id="hours-section">
             <HoursContent>
@@ -88,10 +89,18 @@ const Hours = () => {
                         <p className="paragraph-lg">04:00pm-09:00pm</p>
                     </TextWrapper>
                     <ButtonsWrapper>
-                        <Button size="lg" color="orange">
+                        <Button
+                            size="lg"
+                            color="orange"
+                            onClick={() => navigate("menu")}
+                        >
                             Order Now
                         </Button>
-                        <Button size="lg" color="white">
+                        <Button
+                            size="lg"
+                            color="white"
+                            onClick={() => navigate("reservation")}
+                        >
                             Reservation
                         </Button>
                     </ButtonsWrapper>

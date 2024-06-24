@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import salad from "../../../../assets/salad.png";
 import { Button } from "../../../../design-system/button/Button";
@@ -67,6 +68,7 @@ const StyledImg = styled.img`
 `;
 
 const Welcome = () => {
+    const navigate = useNavigate()
     return (
         <WelcomeSectionContainer id="welcome-section">
             <WelcomeContent>
@@ -82,7 +84,7 @@ const Welcome = () => {
                         innovative menu, featuring fresh, locally sourced
                         ingredients and authentic Italian flavors.
                     </WelcomeDescription>
-                    <Button size="lg" color="orange">
+                    <Button size="lg" color="orange" onClick={() => navigate("menu")}>
                         See Our Menu
                     </Button>
                 </WelcomeRight>

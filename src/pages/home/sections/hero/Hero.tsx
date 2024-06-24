@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { useNavigate } from "react-router-dom";
 import hero from "../../../../assets/hero.png"
 import { Button } from "../../../../design-system/button/Button";
 import { Container, Content } from "../../../components";
@@ -65,6 +65,7 @@ const StyledImg = styled.img`
 `;
 
 const Hero = () => {
+    const navigate = useNavigate()
     return (
         <Container>
             <HeroSectionContent>
@@ -76,10 +77,10 @@ const Hero = () => {
                         blends tradition with contemporary flair.
                     </Description>
                     <Actions>
-                        <Button size="lg" color="orange">
+                        <Button size="lg" color="orange" onClick={() => navigate("menu")}>
                             Order Now
                         </Button>
-                        <Button size="lg" color="green">
+                        <Button size="lg" color="green" onClick={() => navigate("reservation")}>
                             Reservation
                         </Button>
                     </Actions>
