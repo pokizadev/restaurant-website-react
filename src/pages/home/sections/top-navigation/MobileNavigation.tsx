@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { links } from "./TopNavigation";
 import { Button } from "../../../../design-system/button/Button";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MobileNavContent = styled.div`
     width: 100%;
@@ -59,7 +60,7 @@ const MobileNavLinks = styled.ul`
     }
 `;
 
-const NavLink = styled.a`
+const Link = styled(NavLink)`
     color: var(--light-brown);
     letter-spacing: 0.11rem;
 
@@ -86,12 +87,13 @@ const MobileNavigation = () => {
                     {links.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <NavLink
+                                <Link
                                     className="paragraph-xl"
-                                    href={link.link}
+                                    to={link.link}
+                                    end
                                 >
                                     {link.text}
-                                </NavLink>
+                                </Link>
                             </li>
                         );
                     })}
@@ -104,7 +106,13 @@ const MobileNavigation = () => {
                     >
                         Sign Up
                     </StyledButton>
-                    <StyledButton size="sm" color="green" onClick={() => {navigate("login")}}>
+                    <StyledButton
+                        size="sm"
+                        color="green"
+                        onClick={() => {
+                            navigate("login");
+                        }}
+                    >
                         Sign In
                     </StyledButton>
                 </MobileNavLinks>
