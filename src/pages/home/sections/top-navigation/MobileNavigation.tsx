@@ -68,14 +68,27 @@ const Link = styled(NavLink)`
     &:focus {
         color: var(--orange);
     }
+
+    &.active {
+        color: var(--orange);
+    }
 `;
 
 const StyledButton = styled(Button)`
     width: 20rem;
     margin-top: 1rem;
 `;
-const MobileNavigation = () => {
+
+type MobileNavigationProps = {
+    toggleMobileNav: () => void
+};
+
+const MobileNavigation: React.FC<MobileNavigationProps> = ({toggleMobileNav}) => {
     const navigate = useNavigate();
+
+    const handleLinkClick = () => {
+        toggleMobileNav()
+    }
 
     return (
         <MobileNavContent>
@@ -90,7 +103,7 @@ const MobileNavigation = () => {
                                 <Link
                                     className="paragraph-xl"
                                     to={link.link}
-                                    end
+                                    onClick={handleLinkClick}
                                 >
                                     {link.text}
                                 </Link>
@@ -101,7 +114,8 @@ const MobileNavigation = () => {
                         size="sm"
                         color="orange"
                         onClick={() => {
-                            navigate("sign-up");
+                            navigate("sign-up")
+                            toggleMobileNav()
                         }}
                     >
                         Sign Up
@@ -110,7 +124,8 @@ const MobileNavigation = () => {
                         size="sm"
                         color="green"
                         onClick={() => {
-                            navigate("login");
+                            navigate("login")
+                            toggleMobileNav()
                         }}
                     >
                         Sign In

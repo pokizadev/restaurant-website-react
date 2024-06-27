@@ -4,6 +4,7 @@ import reservation from "../../../../assets/reservation.png";
 import { Container, Content } from "../../../components";
 
 const ReservationContainer = styled(Container)`
+    margin-top: 4rem;
     background-color: #fff4e766;
 `;
 const ReservationContent = styled(Content)`
@@ -61,7 +62,6 @@ const Title = styled.h2`
     @media (max-width: 97.5em) {
         width: 100%;
     }
-
 `;
 
 const Description = styled.p`
