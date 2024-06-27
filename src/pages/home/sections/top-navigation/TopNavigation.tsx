@@ -1,3 +1,7 @@
+import { MobileNavigation } from "./MobileNavigation";
+import { Container } from "../../../components";
+import { AccountModal } from "./manageAccountModal";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -6,11 +10,6 @@ import cart from "../../../../assets/cart.svg";
 import accountIcon from "../../../../assets/account1.svg";
 import mobileNavIcon from "../../../../assets/Home.svg";
 import closeIcon from "../../../../assets/close (2).png";
-
-import { MobileNavigation } from "./MobileNavigation";
-import { Container } from "../../../components";
-import { AccountModal } from "./manageAccountModal";
-import { NavLink } from "react-router-dom";
 
 export const links = [
     { text: "Home", link: "/" },
@@ -130,7 +129,11 @@ const TopNavigation = () => {
                     {links.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <Link className="paragraph-sm" to={link.link} end>
+                                <Link
+                                    className="paragraph-sm"
+                                    to={link.link}
+                                    end
+                                >
                                     {link.text}
                                 </Link>
                             </li>
@@ -156,7 +159,7 @@ const TopNavigation = () => {
                     </MobileNavIconWrapper>
                 </Actions>
                 {showActions && <AccountModal />}
-                {showMobileNav && <MobileNavigation />}
+                {showMobileNav && <MobileNavigation toggleMobileNav={handleMobileNavToggle} />}
             </Navigation>
         </Container>
     );
